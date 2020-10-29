@@ -1,0 +1,328 @@
+html {
+    background: linear-gradient(to top right, rgb(255, 255, 255), rgb(211, 247, 252)) center no-repeat;
+}
+
+body {
+    margin: 0 15%;
+    font-family: 'Oswald', serif;
+    font-size: 1em;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 1em;
+    background-color: #0b0c0e8c;
+    border-radius: 0 0 10px 10px;
+    z-index: 1;
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.4em;
+        border-bottom: 3px solid transparent;
+        transition: .4s;
+        margin-bottom: 0.3em;
+        &:first-child {
+            margin: 0 auto 0.3em 2em;
+        }
+        margin-right: 2em;
+        &:hover {
+            border-color: #ffffff;
+        }
+    }
+}
+
+#presentation {
+    width: 82%;
+    margin: 0 auto;
+    padding-top: 3.5em;
+    text-align: center;
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+#accordion {
+    width: 90%;
+    margin: 10px auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.6em;
+    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+}
+
+.accordion {
+    input {
+        display: none;
+    }
+    label {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        cursor: pointer;
+        border: 3px solid #607b92;
+        user-select: none;
+    }
+    label div:first-child {
+        width: 100%;
+        line-height: 45px;
+        margin-left: 10px;
+        font-size: 1.4em;
+    }
+    .cross {
+        margin-right: 15px;
+        margin-top: 4px;
+    }
+    .cross:before,
+    .cross:after {
+        content: '';
+        border-top: 2px solid #607b92;
+        width: 15px;
+        display: block;
+        margin-top: 18px;
+        transition: .8s;
+    }
+    .cross:after {
+        transform: rotate(90deg);
+        margin-top: -2px;
+    }
+    .content {
+        box-sizing: border-box;
+        font-size: 1.2em;
+        text-align: justify;
+        margin: 10px 10px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height, .3s;
+    }
+    input:checked~.content {
+        max-height: 400px;
+        transition: max-height, .8s;
+    }
+    input:checked~label {
+        background-color: #302f2f;
+        color: white;
+        transition: background-color, .8s, color, .8s;
+        .cross:before {
+            transform: rotate(180deg);
+        }
+    }
+    input:checked~label .cross:after {
+        transform: rotate(0deg);
+    }
+}
+
+#moreInfo {
+    width: 80%;
+    margin: auto;
+}
+
+#skills {
+    display: grid;
+    grid-template-areas: "first" "second" "third";
+    grid-template-columns: 100%;
+    #firstLineSkill {
+        grid-area: first;
+    }
+    #secondLineSkill {
+        grid-area: second;
+    }
+    #firstLineSkill,
+    #secondLineSkill {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+    .skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h2 {
+            width: 20em;
+        }
+    }
+    .graph {
+        position: relative;
+        width: 120px;
+        height: 120px;
+    }
+    canvas {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    span {
+        display: block;
+        line-height: 120px;
+        text-align: center;
+        width: 120px;
+        font-family: sans-serif;
+        font-size: 1em;
+        margin-left: 4px;
+    }
+    hr.solid {
+        border-top: 4px solid #bbb;
+        margin-top: 2em;
+        width: 80%;
+    }
+}
+
+#cv {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    a {
+        border-radius: 10px;
+        background-color: #15478a;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        padding: 20px;
+        height: 20px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+    a span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.3s;
+        &::after {
+            content: url("../../images/download-cv.png");
+            position: absolute;
+            opacity: 0;
+            top: 0;
+        }
+    }
+    a:hover {
+        background: #47a7f5;
+        #span {
+            padding-right: 25px;
+            &::after {
+                opacity: 1;
+                right: 0;
+            }
+        }
+    }
+}
+
+.footer {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        li {
+            margin: 0 20px;
+            a {
+                img {
+                    width: 80px;
+                    height: 80px;
+                    transform: scale(1);
+                    transition: transform .4s;
+                    &:hover {
+                        transform: scale(1.15);
+                    }
+                }
+            }
+        }
+    }
+}
+
+hr.solid {
+    border-top: 4px solid #bbb;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1400px) {
+    #firstLineSkill,
+    #secondLineSkill {
+        flex-direction: column !important;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #navbar {
+        a:first-child {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #navbar {
+        justify-content: center;
+        a {
+            margin: auto;
+            font-size: 1em;
+        }
+    }
+    #skills {
+        #firstLineSkill,
+        #secondLineSkill {
+            width: 100%;
+        }
+        .skill {
+            h2 {
+                font-size: 1.2em;
+                max-width: 100%;
+            }
+        }
+    }
+    .footer {
+        padding: 0;
+        #contact {
+            li {
+                margin: 0;
+            }
+        }
+    }
+    .accordion {
+        .content {
+            font-size: 0.9em;
+        }
+        label div:first-child {
+            font-size: 1em;
+        }
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #cv {
+        a {
+            height: 42px;
+        }
+    }
+}

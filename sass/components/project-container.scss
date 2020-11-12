@@ -10,10 +10,10 @@ $darkBackground: #5b5f97;
 }
 
 .project-container {
-    min-height: 310px;
+    min-height: 200px;
     width: 265px;
     margin: 6.5em 2.5em 2em 1.5em;
-    padding-bottom: 90px;
+    padding-bottom: 130px;
     border-radius: 5px;
     background: $background;
     position: relative;
@@ -69,7 +69,7 @@ $darkBackground: #5b5f97;
             margin: 10px 0;
             padding-top: 6px;
             border-radius: 5px;
-            cursor: pointer;
+            cursor: default;
             &:hover {
                 background: #3083aa;
                 color: white;
@@ -77,6 +77,10 @@ $darkBackground: #5b5f97;
         }
     }
     .show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
         width: 80%;
         height: 60px;
         position: absolute;
@@ -91,18 +95,30 @@ $darkBackground: #5b5f97;
         background-size: 300% 300%;
         border: none;
         transition: all 200ms ease-in-out;
+        &:hover {
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            transform: translateY(2px);
+            animation: gradientBG .8s ease-in-out forwards;
+        }
+    }
+    .github {
         display: flex;
         justify-content: center;
         align-items: center;
         text-decoration: none;
+        position: absolute;
+        height: 30px;
+        bottom: 5.7em;
+        left: 0;
+        font-size: 1em;
+        color: #000000;
+        border: solid 2px #3083aa;
+        border-radius: 5px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        transition: all 200ms ease-in-out;
         &:hover {
-            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
             transform: translateY(2px);
-            animation: gradientBG 1.5s ease-in-out forwards;
-        }
-        &:active {
-            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-            transform: translateY(4px);
         }
     }
 }
@@ -113,17 +129,18 @@ $darkBackground: #5b5f97;
     }
     label {
         display: flex;
-        width: 70%;
         height: 30px;
-        cursor: pointer;
         border: solid 2px #478fb3;
+        line-height: 30px;
         user-select: none;
         border-radius: 5px;
+        cursor: pointer;
+        width: 90%;
+        margin: 0 5%;
     }
     label div:first-child {
         width: 100%;
         line-height: 25px;
-        margin-left: 10px;
         font-size: 1.2em;
     }
     .cross {
@@ -157,15 +174,45 @@ $darkBackground: #5b5f97;
         transition: height, .8s;
     }
     input:checked~label {
-        background: linear-gradient(45deg, $otherAccent, $accent, $otherAccent, $accent);
-        background-size: 600% 100%;
-        color: #ffffff;
-        transition: color, .4s;
         .cross:before {
             transform: rotate(180deg);
         }
+        .cross:after {
+            transform: rotate(0deg);
+        }
     }
-    input:checked~label .cross:after {
-        transform: rotate(0deg);
+}
+
+@media screen and (min-width: 426px) {
+    .social label {
+        &:first-child {
+            margin-left: 10px;
+        }
+    }
+    .github {
+        width: 50%;
+        margin: 0 25%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        margin: 0 5%;
+    }
+    #navbar {
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .social label {
+        &:first-child {
+            margin-left: 5px;
+        }
+        font-size: 0.9em;
+    }
+    .github {
+        width: 60%;
+        margin: 0 20%;
     }
 }

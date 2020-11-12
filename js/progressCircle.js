@@ -10,7 +10,7 @@ let moveCircle = function(color, lineWidth, percent, ctx, radius, size, els) {
         ctx.arc(0, 0, radius, 0, Math.PI * 2 * percent, false);
         ctx.strokeStyle = color;
         ctx.lineCap = 'round';
-        ctx.lineWidth = lineWidth
+        ctx.lineWidth = lineWidth;
         ctx.stroke();
     };
 
@@ -44,13 +44,10 @@ let moveCircle = function(color, lineWidth, percent, ctx, radius, size, els) {
     }
 };
 
-let bodyRect = document.body.getBoundingClientRect(),
-    elemRect = document.getElementById("firstLineSkill").getBoundingClientRect(),
-    offset = (elemRect.top - bodyRect.top) / 2;
+let bodyRect = document.body.getBoundingClientRect();
 
 window.addEventListener('scroll', function() {
-    console.log(offset);
-    if (document.body.scrollTop > offset || document.documentElement.scrollTop > offset) {
+    if (document.body.scrollTop > bodyRect.top || document.documentElement.scrollTop > bodyRect.top) {
         this.removeEventListener('scroll', arguments.callee);
         for (let i = 0; i < els.length; i++) {
             let options = {

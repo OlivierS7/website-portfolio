@@ -1,0 +1,171 @@
+$background: #fffffb;
+$accent: #ff6b6c;
+$otherAccent: #206f94;
+$darkBackground: #5b5f97;
+#project-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.project-container {
+    min-height: 310px;
+    width: 265px;
+    margin: 6.5em 2.5em 2em 1.5em;
+    padding-bottom: 90px;
+    border-radius: 5px;
+    background: $background;
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    .profile-img {
+        height: 85px;
+        width: 85px;
+        position: absolute;
+        top: -30px;
+        right: -35px;
+        border-radius: 50%;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    #cremet {
+        background: url('../../images/projets/cremet.png');
+        background-size: cover;
+        background-position: center;
+    }
+    #solidarity-bond {
+        background: url('../../images/projets/solidarity-bond.png');
+        background-size: cover;
+        background-position: center;
+    }
+    #future {
+        background: url('../../images/projets/future.png');
+        background-size: cover;
+        background-position: center;
+    }
+    #portfolio {
+        background: url('../../images/projets/portfolio.png');
+        background-size: cover;
+        background-position: center;
+    }
+    h1 {
+        padding: 10px 40px 0px 10px;
+        color: $otherAccent;
+        font-size: 1.8em;
+    }
+    .description {
+        margin: 0 10px 10px 10px;
+    }
+    .social {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: calc(100%);
+        a {
+            border: solid 2px #3083aa;
+            width: 150px;
+            height: 30px;
+            margin: 10px 0;
+            padding-top: 6px;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover {
+                background: #3083aa;
+                color: white;
+            }
+        }
+    }
+    .show {
+        width: 80%;
+        height: 60px;
+        position: absolute;
+        bottom: 1em;
+        left: 0;
+        font-size: 1.5em;
+        margin: 0 10%;
+        color: $background;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        background: linear-gradient(45deg, $accent, $otherAccent, $otherAccent, $accent);
+        background-size: 300% 300%;
+        border: none;
+        transition: all 200ms ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        &:hover {
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            transform: translateY(2px);
+            animation: gradientBG 1.5s ease-in-out forwards;
+        }
+        &:active {
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+            transform: translateY(4px);
+        }
+    }
+}
+
+.accordion {
+    input {
+        display: none;
+    }
+    label {
+        display: flex;
+        width: 70%;
+        height: 30px;
+        cursor: pointer;
+        border: solid 2px #478fb3;
+        user-select: none;
+        border-radius: 5px;
+    }
+    label div:first-child {
+        width: 100%;
+        line-height: 25px;
+        margin-left: 10px;
+        font-size: 1.2em;
+    }
+    .cross {
+        margin-right: 15px;
+        margin-top: 4px;
+    }
+    .cross:before,
+    .cross:after {
+        content: '';
+        border-top: 2px solid #000000;
+        width: 15px;
+        display: block;
+        margin-top: 10px;
+        transition: .8s;
+    }
+    .cross:after {
+        transform: rotate(90deg);
+        margin-top: -2px;
+    }
+    .content {
+        box-sizing: border-box;
+        font-size: 1em;
+        text-align: center;
+        margin: 10px 10px;
+        overflow: hidden;
+        max-height: 0;
+        transition: height, .3s;
+    }
+    input:checked~.content {
+        max-height: 600px;
+        transition: height, .8s;
+    }
+    input:checked~label {
+        background: linear-gradient(45deg, $otherAccent, $accent, $otherAccent, $accent);
+        background-size: 600% 100%;
+        color: #ffffff;
+        transition: color, .4s;
+        .cross:before {
+            transform: rotate(180deg);
+        }
+    }
+    input:checked~label .cross:after {
+        transform: rotate(0deg);
+    }
+}

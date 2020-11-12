@@ -1,29 +1,3 @@
-body {
-  margin: 0 15%;
-  font-family: 'Oswald', serif;
-  font-size: 1em; }
-
-::-webkit-scrollbar {
-  display: none; }
-
-.scrollBar {
-  position: fixed;
-  top: 1%;
-  right: .5%;
-  z-index: 1;
-  height: 98%; }
-
-.progress-bar {
-  width: 8px;
-  background: #4caf50;
-  height: 0%; }
-
-.flexContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
 #navbar {
   position: fixed;
   top: 0;
@@ -47,6 +21,105 @@ body {
       margin: 0 auto 0.3em 2em; }
     #navbar a:hover {
       border-color: #ffffff; }
+
+@media screen and (max-width: 750px) {
+  #navbar {
+    justify-content: center; }
+    #navbar a {
+      margin: auto;
+      font-size: 1em; }
+      #navbar a:first-child {
+        display: none; } }
+.scrollBar {
+  position: fixed;
+  top: 1%;
+  right: .5%;
+  z-index: 1;
+  height: 98%; }
+
+.progress-bar {
+  width: 8px;
+  background: #4caf50;
+  height: 0%; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+.footer {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0; }
+  .footer #contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .footer #contact li {
+      margin: 0 20px; }
+      .footer #contact li a img {
+        width: 80px;
+        height: 80px;
+        transform: scale(1);
+        transition: transform .4s; }
+        .footer #contact li a img:hover {
+          transform: scale(1.15); }
+
+@media screen and (max-width: 750px) {
+  .footer #contact li {
+    margin: 0; } }
+#cv {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center; }
+  #cv a {
+    border-radius: 10px;
+    background-color: #15478a;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    height: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px; }
+  #cv a span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s; }
+    #cv a span::after {
+      content: url("../../images/download-cv.png");
+      position: absolute;
+      opacity: 0;
+      top: 0; }
+  #cv a:hover {
+    background: #47a7f5; }
+    #cv a:hover #span {
+      padding-right: 25px; }
+      #cv a:hover #span::after {
+        opacity: 1;
+        right: 0; }
+
+@media screen and (max-width: 400px) {
+  #cv a {
+    height: 42px; } }
+body {
+  margin: 0 15%;
+  font-family: 'Oswald', serif;
+  font-size: 1em; }
+
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+hr.solid {
+  border-top: 4px solid #bbb; }
 
 #presentation {
   width: 82%;
@@ -159,65 +232,6 @@ h1 {
     margin-top: 2em;
     width: 80%; }
 
-#cv {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  text-transform: uppercase;
-  text-align: center; }
-  #cv a {
-    border-radius: 10px;
-    background-color: #15478a;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 20px;
-    height: 20px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px; }
-  #cv a span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.3s; }
-    #cv a span::after {
-      content: url("../../images/download-cv.png");
-      position: absolute;
-      opacity: 0;
-      top: 0; }
-  #cv a:hover {
-    background: #47a7f5; }
-    #cv a:hover #span {
-      padding-right: 25px; }
-      #cv a:hover #span::after {
-        opacity: 1;
-        right: 0; }
-
-.footer {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0; }
-  .footer #contact {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-    .footer #contact li {
-      margin: 0 20px; }
-      .footer #contact li a img {
-        width: 80px;
-        height: 80px;
-        transform: scale(1);
-        transition: transform .4s; }
-        .footer #contact li a img:hover {
-          transform: scale(1.15); }
-
-hr.solid {
-  border-top: 4px solid #bbb; }
-
 .bold {
   font-weight: bold; }
 
@@ -226,24 +240,12 @@ hr.solid {
   #secondLineSkill {
     flex-direction: column !important; } }
 @media screen and (max-width: 750px) {
-  #navbar a:first-child {
-    display: none; } }
-@media screen and (max-width: 750px) {
-  #navbar {
-    justify-content: center; }
-    #navbar a {
-      margin: auto;
-      font-size: 1em; }
-
   #skills #firstLineSkill,
   #skills #secondLineSkill {
     width: 100%; }
   #skills .skill h2 {
     font-size: 1.2em;
     max-width: 100%; }
-
-  .footer #contact li {
-    margin: 0; }
 
   .accordion .content {
     font-size: 0.9em; }
@@ -252,8 +254,5 @@ hr.solid {
 
   h1 {
     font-size: 1.3em; } }
-@media screen and (max-width: 400px) {
-  #cv a {
-    height: 42px; } }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,16 @@
+.scrollBar {
+  position: fixed;
+  top: 1%;
+  right: .5%;
+  z-index: 1;
+  height: 98%; }
+
+.progress-bar {
+  width: 8px;
+  background: #4caf50;
+  height: 0%; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+/*# sourceMappingURL=scrollBar.css.map */

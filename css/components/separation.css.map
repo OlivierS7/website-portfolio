@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAS;EACL,UAAU,EAAE,cAAc",
+"sources": ["../../sass/components/separation.scss"],
+"names": [],
+"file": "separation.css"
+}

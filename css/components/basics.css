@@ -1,0 +1,12 @@
+body {
+  margin: 0 15%;
+  font-family: 'Oswald', serif;
+  font-size: 1em; }
+
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+/*# sourceMappingURL=basics.css.map */

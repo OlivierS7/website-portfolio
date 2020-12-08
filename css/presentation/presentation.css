@@ -1,0 +1,553 @@
+#navbar {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #0b0c0e8c;
+    z-index: 1;
+    padding-top: 1em;
+    border-radius: 0 0 10px 10px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.4em;
+    border-bottom: 3px solid transparent;
+    transition: .4s;
+    margin-bottom: 0.3em;
+    margin-right: 2em;
+}
+
+#navbar a:first-child {
+    margin: 0 auto 0.3em 2em;
+}
+
+#navbar a:hover {
+    border-color: #ffffff;
+}
+
+@media screen and (max-width: 750px) {
+    #navbar {
+        justify-content: center;
+    }
+    #navbar a {
+        margin: auto;
+        font-size: 1em;
+    }
+    #navbar a:first-child {
+        display: none;
+    }
+}
+
+.scrollBar {
+    position: fixed;
+    top: 1%;
+    right: .5%;
+    z-index: 1;
+    height: 98%;
+}
+
+.progress-bar {
+    width: 8px;
+    background: #4caf50;
+    height: 0%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.footer {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.footer #contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer #contact li {
+    margin: 0 20px;
+}
+
+.footer #contact li a img {
+    width: 80px;
+    height: 80px;
+    transform: scale(1);
+    transition: transform .4s;
+}
+
+.footer #contact li a img:hover {
+    transform: scale(1.15);
+}
+
+@media screen and (max-width: 750px) {
+    .footer #contact li {
+        margin: 0;
+    }
+}
+
+#cv {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#cv a {
+    border-radius: 10px;
+    background-color: #15478a;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    height: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#cv a span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+
+#cv a span::after {
+    content: url("../../images/download-cv.png");
+    position: absolute;
+    opacity: 0;
+    top: 0;
+}
+
+#cv a:hover {
+    background: #47a7f5;
+}
+
+#cv a:hover #span {
+    padding-right: 25px;
+}
+
+#cv a:hover #span::after {
+    opacity: 1;
+    right: 0;
+}
+
+@media screen and (max-width: 400px) {
+    #cv a {
+        height: 42px;
+    }
+}
+
+html,
+body {
+    margin: 0 10%;
+    font-family: 'Oswald', serif;
+    font-size: 1em;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+hr.solid {
+    border-top: 4px solid #bbb;
+}
+
+#project-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.project-container {
+    min-height: 200px;
+    width: 265px;
+    margin: 4em 2.5em 2em 1.5em;
+    padding-bottom: 130px;
+    border-radius: 5px;
+    background: #fffffb;
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.project-container .profile-img {
+    height: 85px;
+    width: 85px;
+    position: absolute;
+    top: -30px;
+    right: -35px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.project-container #cremet {
+    background: url("../../images/projets/cremet.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.project-container #solidarity-bond {
+    background: url("../../images/projets/solidarity-bond.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.project-container #future {
+    background: url("../../images/projets/future.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.project-container #portfolio {
+    background: url("../../images/projets/portfolio.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.project-container h1 {
+    padding: 10px 40px 0px 10px;
+    color: #206f94;
+    font-size: 1.8em;
+}
+
+.project-container .description {
+    margin: 0 10px 10px 10px;
+}
+
+.project-container .social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: calc(100%);
+}
+
+.project-container .social a {
+    border: solid 2px #3083aa;
+    width: 150px;
+    height: 30px;
+    margin: 10px 0;
+    padding-top: 6px;
+    border-radius: 5px;
+    cursor: default;
+}
+
+.project-container .social a:hover {
+    background: #3083aa;
+    color: white;
+}
+
+.project-container .show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 80%;
+    height: 60px;
+    position: absolute;
+    bottom: 1em;
+    left: 0;
+    font-size: 1.5em;
+    margin: 0 10%;
+    color: #fffffb;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    background: linear-gradient(45deg, #ff6b6c, #206f94, #206f94, #ff6b6c);
+    background-size: 300% 300%;
+    border: none;
+    transition: all 200ms ease-in-out;
+}
+
+.project-container .show:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(2px);
+    animation: gradientBG .8s ease-in-out forwards;
+}
+
+.project-container .github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: absolute;
+    height: 30px;
+    bottom: 5.7em;
+    left: 0;
+    font-size: 1em;
+    color: #000000;
+    border: solid 2px #3083aa;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all 200ms ease-in-out;
+}
+
+.project-container .github:hover {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    transform: translateY(2px);
+}
+
+.project-container .accordion label {
+    width: 90%;
+    height: 30px;
+    border: solid 2px #478fb3;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.project-container .accordion label div:first-child {
+    line-height: 25px;
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+.project-container .accordion .cross:before,
+.project-container .accordion .cross:after {
+    border-top: 2px solid #000000;
+}
+
+.project-container .accordion .cross:before {
+    margin-top: 10px;
+}
+
+.project-container .accordion .cross:after {
+    margin-right: 10px;
+}
+
+.project-container .accordion .content {
+    font-size: 1em;
+    text-align: center;
+    transition: height, .3s;
+}
+
+.project-container .accordion input:checked~.content {
+    max-height: 600px;
+    transition: height, .8s;
+}
+
+@media screen and (min-width: 426px) {
+    .social label:first-child {
+        margin-left: 10px;
+    }
+    .github {
+        width: 50%;
+        margin: 0 25%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        margin: 0 5%;
+    }
+    #navbar {
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .social label {
+        font-size: 0.9em;
+    }
+    .social label:first-child {
+        margin-left: 5px;
+    }
+    .github {
+        width: 60%;
+        margin: 0 20%;
+    }
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+#accordion {
+    width: 90%;
+    margin: 10px auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.6em;
+    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE;
+}
+
+.accordion input {
+    display: none;
+}
+
+.accordion label {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    border: 3px solid #607b92;
+    user-select: none;
+}
+
+.accordion label div:first-child {
+    width: 100%;
+    line-height: 45px;
+    margin-left: 10px;
+    font-size: 1.4em;
+}
+
+.accordion .cross {
+    margin-right: 15px;
+    margin-top: 4px;
+}
+
+.accordion .cross:before,
+.accordion .cross:after {
+    content: '';
+    border-top: 2px solid #607b92;
+    width: 15px;
+    display: block;
+    margin-top: 18px;
+    transition: .8s;
+}
+
+.accordion .cross:after {
+    transform: rotate(90deg);
+    margin-top: -2px;
+}
+
+.accordion .content {
+    box-sizing: border-box;
+    font-size: 1.2em;
+    text-align: justify;
+    margin: 10px 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height, .3s;
+}
+
+.accordion input:checked~.content {
+    max-height: 400px;
+    transition: max-height, .8s;
+}
+
+.accordion input:checked~label .cross:before {
+    transform: rotate(180deg);
+}
+
+.accordion input:checked~label .cross:after {
+    transform: rotate(0deg);
+}
+
+#moreInfo {
+    width: 80%;
+    margin: auto;
+}
+
+#skills {
+    display: grid;
+    grid-template-areas: "first" "second" "third";
+    grid-template-columns: 100%;
+}
+
+#skills #firstLineSkill {
+    grid-area: first;
+}
+
+#skills #secondLineSkill {
+    grid-area: second;
+}
+
+#skills #firstLineSkill,
+#skills #secondLineSkill {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+#skills .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#skills .skill h2 {
+    width: 20em;
+}
+
+#skills .graph {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+#skills canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#skills span {
+    display: block;
+    line-height: 120px;
+    text-align: center;
+    width: 120px;
+    font-family: sans-serif;
+    font-size: 1em;
+    margin-left: 4px;
+}
+
+#skills hr.solid {
+    border-top: 4px solid #bbb;
+    margin-top: 2em;
+    width: 80%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1400px) {
+    #firstLineSkill,
+    #secondLineSkill {
+        flex-direction: column !important;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #skills #firstLineSkill,
+    #skills #secondLineSkill {
+        width: 100%;
+    }
+    #skills .skill h2 {
+        font-size: 1.2em;
+        max-width: 100%;
+    }
+    .accordion .content {
+        font-size: 0.9em;
+    }
+    .accordion label div:first-child {
+        font-size: 1em;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+}

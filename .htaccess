@@ -1,0 +1,6 @@
+RewriteEngine on
+Rewritecond %{REQUEST_URI} !^/image
+Rewritecond %{REQUEST_URI} !^/js
+Rewritecond %{REQUEST_URI} !^/css
+Rewritecond %{REQUEST_URI} !^/static
+Rewriterule .* index.php

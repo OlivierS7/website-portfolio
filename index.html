@@ -11,18 +11,114 @@
     <link rel="stylesheet" href="./css/index/index.css" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" />
     <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 
 <body>
-    <div id="particles-js"></div>
-    <section id="presentation">
-        <h1 id="myName"><a href="https://www.linkedin.com/in/olivier-simonneau-pro/">Olivier SIMONNEAU</a></h1>
-        <h1>Étudiant en 3ème année d'école d'ingénieurs en informatique</h1>
-        <h1>Spécialisé dans le Développement Web</h1>
-        <a id="aboutMe" href="https://www.olivier-simonneau.fr/portfolio">En savoir plus</a>
-    </section>
-    <script src="./js/particles.min.js"></script>
-    <script src="./js/app.js"></script>
+    <div id="container">
+        <section id="presentation">
+            <nav>
+                <div class="nav-links">
+                    <a href="#presentation" class="links active">A Propos De Moi</a>
+                    <a href="#competence" class="links">Compétences</a>
+                    <a href="#career" class="links">Parcours</a>
+                    <a href="#quality" class="links">Qualités</a>
+                    <a href="#project" class="links">Mes Projets</a>
+                    <a href="contact" class="links">Contact</a>
+                </div>
+            </nav>
+            <h1>Olivier Simonneau</h1>
+            <h2>Étudiant en 3ème année d'école d'ingénieurs en informatique<br>Spécialisé dans le Développement Web</h2>
+            <span class="page_number">01</span>
+            <a class="scrollButton" href="#competence"><span></span>Scroll</a>
+            <svg id="bigTriangleColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="125" viewBox="0 0 100 102" preserveAspectRatio="none">
+                <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+                    <stop class="main-stop" offset="0%" />
+                    <stop class="alt-stop" offset="100%" />
+                  </linearGradient>
+                <path d="M0 0 L50 100 L100 0 Z" fill="url(#gradient)" stroke="url(#gradient)"/>
+            </svg>
+        </section>
+        <section id="competence">
+            <h2>Mes compétences</h2>
+            <div class="square full_square" id="first__floor">
+                <div class="square_bg">
+                    <img src="./images/html5.png" alt="HTML 5" height="80px" id="first__img">
+                    <img src="./images/css3.png" alt="CSS 3" height="80px" id="first__img">
+                    <img src="./images/javascript.png" alt="Javascript" height="80px" id="first__img">
+                </div>
+                <div class="annotation"><span>Intégration Web</span></div>
+            </div>
+            <div class="square" id="second__floor">
+                <div class="row">
+                    <div class="small__square">
+                        <img src="./images/php.png" alt="PHP" height="80px">
+                    </div>
+                    <div class="small__square">
+                        <img src="./images/nodejs.png" alt="NodeJS" height="80px">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small__square">
+                        <img src="./images/symfony.png" alt="Symfony" height="80px">
+                    </div>
+                    <div class="small__square">
+                        <img src="./images/Laravel.png" alt="Laravel" height="80px">
+                    </div>
+                </div>
+                <div class="annotation"><span>Back-End</span></div>
+            </div>
+            <div class="square full_square" id="third__floor">
+                <div class="square_bg">
+                    <img src="./images/mariadb.png" alt="MariaDB" height="80px" id="second__img">
+                    <img src="./images/mysql.png" alt="MySQL" height="80px" id="second__img">
+                    <img src="./images/sgbd.png" alt="SGBD" height="80px" id="second__img">
+                </div>
+                <div class="annotation"><span>Base de données</span></div>
+            </div>
+            <div class="square" id="fourth__floor">
+                <div class="row">
+                    <div class="small__square">
+                        <img src="./images/windows.png" alt="Windows" height="80px">
+                    </div>
+                    <div class="small__square">
+                        <img src="./images/linux.png" alt="Linux" height="80px">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small__square">
+                        <img src="./images/vmware.png" alt="VMware" height="80px">
+                    </div>
+                    <div class="small__square">
+                        <img src="./images/docker.png" alt="Docker" height="80px">
+                    </div>
+                </div>
+                <div class="annotation"><span>OS - Virtualisation - Conteneurisation</span></div>
+            </div>
+
+            <span class="page_number">02</span>
+            <a class="scrollButton" href="#career"><span></span>Scroll</a>
+        </section>
+        <section id="career">
+
+            <span class="page_number">03</span>
+            <a class="scrollButton" href="#quality"><span></span>Scroll</a>
+        </section>
+        <section id="quality">
+
+            <span class="page_number">04</span>
+            <a class="scrollButton" href="#project"><span></span>Scroll</a>
+        </section>
+        <section id="project">
+
+            <span class="page_number">05</span>
+        </section>
+        <footer id="contact">
+
+        </footer>
+    </div>
+    <script type="text/javascript" src="./js/scroll.js"></script>
+    <script type="text/javascript" src="./js/animate.js"></script>
 </body>
 
 </html>

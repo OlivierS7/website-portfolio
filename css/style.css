@@ -105,6 +105,14 @@ body, a, button {
 
 /* end navigation */ 
 
+html {
+    scroll-snap-type: y proximity;
+}
+
+section.contact-area {
+    scroll-snap-align: start;
+}
+
 /* Banner Area */ 
 .site-main .site-banner {
     background: url(../img/banner/home-banner.png) no-repeat 0% 50%;
@@ -278,16 +286,6 @@ body, a, button {
     padding-left: 10rem;
 }
 
-.site-main .brand-area .experience-area .social a {
-    padding: 10px;
-    font-size: 30px;
-    color: rgb(54, 54, 54);
-}
-
-.site-main .brand-area .experience-area .social a:hover {
-    color: rgb(86, 135, 199);;
-}
-
 /* End Brand Area */ 
 
 /* Services Area */ 
@@ -327,6 +325,9 @@ body, a, button {
     transition: box-shadow .4s ease;
     border-radius: 10px;
     box-shadow: 10px 10px 10px 2px #00000008;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    
 }
 
 .site-main > .services-area p.para {
@@ -336,6 +337,18 @@ body, a, button {
 
 .site-main > .services-area .services:hover{
     box-shadow: var(--box-shadow);
+}
+
+.services-area .services .sevices-img, .services-area .services .card-body {
+    transition: transform .3s ease;
+}
+
+.services-area .services:hover .sevices-img{
+    transform: scale(1.1) translateZ(10px);
+}
+
+.services-area .services:hover .card-body {
+    transform: scale(1.02) translateZ(10px);
 }
 
 /* End Services Area */ 
@@ -443,11 +456,105 @@ body, a, button {
     width: 12px;
     height: 12px;
 }
-
-
-
 /* End About Me */ 
 
+
+/* Contact Me */ 
+
+.contact-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: .5s;
+}
+
+.contact-area .social {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.contact-area .social li {
+    list-style: none;
+}
+
+.contact-area .social li::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6em;
+    color: #fff;
+    pointer-events: none;
+    font-weight: 700;
+    transition: .5s;
+    opacity: 0;
+}
+
+.contact-area .social li:hover::before {
+    opacity: 0.4;
+    transform: translate(-50%, calc(-50% + 150px));
+}
+
+.contact-area .social li a {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 4em;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    box-shadow: 0 25px 35px rgba(0,0,0,0.1);
+    transition: background 0.25s;
+}
+
+.contact-area .social li a:hover.linkedin {
+    background: #0e76a8;
+}
+
+.contact-area .social li a:hover.github {
+    background: #252525;
+}
+
+.contact-area .social li a:hover.siteweb {
+    background: #6dc7ff;
+}
+
+.contact-area .social li a:hover.mail {
+    background: #ff343e;
+}
+
+.contact-area .social li a:hover.mobile {
+    background: #8aff54;
+}
+
+.contact-area .social li a i {
+    transition: all 0.25s;
+    pointer-events: none;
+}
+
+.contact-area .social li a:hover i {
+    color: #fff;
+    transform: scale(1.65) translateZ(50px);
+}
+
+.js-tilt-glare {
+    border-radius: 10px;
+}
+
+/* End Contact Me */ 
 
 /* Footer Area */ 
 
@@ -703,6 +810,10 @@ footer.footer-area .social a:hover > i{
     
     .site-main .site-banner .site-title h4{
         font-size: 1.3rem;
+    }
+
+    .contact-area .social li::before {
+        font-size: 0;
     }
 }
 

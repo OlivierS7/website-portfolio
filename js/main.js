@@ -68,8 +68,28 @@ if(window.innerWidth < 992) {
 }
 
 const loader = document.querySelector("#preloader");
-console.log(loader);
 loader.style.left = "-100%";
 
+let socialList = document.querySelectorAll(".social li");
+let bg = document.querySelector(".contact-area");
+socialList.forEach(el => {
+    el.addEventListener("mouseenter", function (event) {
+        let color = event.target.getAttribute("data-color");
+        bg.style.backgroundColor = color;
+    })
+
+    el.addEventListener("mouseleave", function (event) {
+        bg.style.backgroundColor = "#fff";
+    })
 })
+
+
+})
+
+window.onmouseout=function(event){ 
+    if(event.toElement===null) {
+        cursor.style.opacity = 0;
+        cursor_hover.style.opacity = 0;
+    } 
+}
 

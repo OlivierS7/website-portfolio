@@ -1,0 +1,730 @@
+/* import fonts from fonts.css file */ 
+@import url(./fonts.css);
+
+/* css variables */ 
+@import url(./partials/_variables.css);
+
+/* import global styling */ 
+@import url(./partials/_global.css);
+
+/* Custom Cursor */
+
+.cursor {
+    position: fixed;
+    color: #000;
+    font-size: 0.8em;
+    user-select: none;
+    pointer-events: none;
+    width: 80px;
+    height: 80px;
+    animation: turnInfinite 5s linear infinite;
+    z-index: 999;
+}
+
+.cursor_hover {
+    position: fixed;
+    color: #000;
+    user-select: none;
+    pointer-events: none;
+    font-size: 4em;
+    width: 6px;
+    height: 6px;
+    transition: opacity 0.6s ease;
+    z-index: 999;
+    opacity: 0;
+}
+
+.cursor-links:hover {
+    cursor: none;
+}
+
+@media screen and (max-width: 1023px) {
+    .cursor, .cursor_hover {
+        display: none;
+    }
+}
+
+@keyframes turnInfinite
+{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* End Custom Cursor */
+
+body {
+    overflow-x: hidden;
+}
+
+body, a, button {
+    cursor: none;
+}
+
+/* start navigation */ 
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+}
+
+.header_area .main-menu {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.747);
+    z-index: 10;
+}
+
+.header_area .main-menu .navbar{
+    padding: 1rem 20rem;
+    height: 120px;
+}
+
+.header_area .main-menu .navbar-brand img{
+    width: 70%;
+    height: 70%;
+}
+
+.header_area .main-menu .nav-item .nav-link{
+    font: normal 500 15px/2px var(--nunito_sans);
+    text-transform: uppercase;
+    padding: 1.7rem;
+    color: var(--title-color);
+}
+
+.header_area .main-menu .navbar-nav a:hover{
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+/* end navigation */ 
+
+/* Banner Area */ 
+.site-main .site-banner {
+    background: url(../img/banner/home-banner.png) no-repeat 0% 50%;
+    min-height: 80vh;
+    padding-top: 200px;
+}
+
+.site-main .site-banner .container {
+    min-height: 100vh;
+}
+
+.site-main .site-banner .site-title h1{
+    padding-top: 35%;
+    font: normal bold 50px/ 72px 'Dela Gothic One';
+    letter-spacing: 3px;
+    font-size: 3.6rem;
+    color: rgb(222, 228, 248);
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000
+}
+
+.site-main .site-banner .site-title h4{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.site-main .site-banner .site-title h4:nth-child(3){
+    line-height: 20px;
+}
+
+
+
+.site-main .site-banner .banner-image > img{
+    padding: 7rem 0;
+    width: 90rem;
+}
+
+/* End Banner Area */ 
+
+/* Start About Area */ 
+
+.site-main .about-area{
+    padding: 4rem 5rem;
+}
+
+.site-main .about-area .about-title {
+    margin: auto;
+}
+
+.site-main .about-area .about-title h2 > span{
+    display: block;
+    font: normal bold 49px/ 60px 'Dela Gothic One';
+    letter-spacing: 8px;
+    color: rgb(222, 228, 248);
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+
+.site-main .about-area .about-title .paragraph > p{
+    padding: .4rem 0;
+}
+
+/* End About Area */ 
+
+
+/* Start Brand Area */ 
+
+.site-main .brand-area{
+    padding: 1rem 20rem;
+    margin-bottom: 4rem;
+}
+
+.site-main .brand-area .first-row .col-lg-4{
+    display: flex;
+    justify-content: center;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand{
+    border: 1px solid var(--border-color);
+    text-align: center;
+    padding: 1.8rem 0rem;
+    margin: .9rem 0;
+    width: 180px;
+    height: 100px;
+    /* cursor: pointer; */
+    transition: transform .4s ease;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .javascript-brand, 
+.site-main .brand-area .first-row .col-lg-4 > .cplusplus-brand {
+    padding: 0.9rem 0rem;
+}
+.site-main .brand-area .first-row .col-lg-4 > .php-brand{
+    padding: 1.8rem 0rem;
+}
+.site-main .brand-area .first-row .col-lg-4 > .css-brand, 
+.site-main .brand-area .first-row .col-lg-4 > .symfony-brand {
+    padding: 0.8rem 0rem;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .html-brand{
+    padding: 0.4rem 0rem;
+}
+.site-main .brand-area .first-row .col-lg-4 > .java-brand{
+    padding: 0.3rem 0rem;
+}
+.site-main .brand-area .first-row .col-lg-4 > .et-plus-brand{
+    padding: 2rem 0rem;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .wordpress-brand > img{
+    width: 70%;
+}
+.site-main .brand-area .first-row .col-lg-4 > .et-plus-brand > img{
+    width: 60%;
+}
+.site-main .brand-area .first-row .col-lg-4 > .php-brand > img,
+.site-main .brand-area .first-row .col-lg-4 > .java-brand > img,
+.site-main .brand-area .first-row .col-lg-4 > .html-brand > img {
+    width: 50%;
+}
+.site-main .brand-area .first-row .col-lg-4 > .javascript-brand > img{
+    width: 40%;
+}
+.site-main .brand-area .first-row .col-lg-4 > .symfony-brand > img,
+.site-main .brand-area .first-row .col-lg-4 > .cplusplus-brand > img{
+    width: 35%;
+}
+.site-main .brand-area .first-row .col-lg-4 > .css-brand > img{
+    width: 30%;
+}
+
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand:hover{
+    box-shadow: var(--box-shadow);
+    transform: scale(1.2);
+}
+
+.site-main .brand-area .experience-area{
+    padding: 2.5rem 8.5rem 2.5rem 6.5rem;
+    background-color: #ffe2a254;
+    clip-path: polygon(85% 8%, 75% 50%, 85% 92%, 25% 92%, 5% 50%, 25% 8%);
+}
+
+.site-main .brand-area .experience-area span{
+    display: block;
+}
+
+.site-main .brand-area .experience-area .years-area{
+    padding: .5rem 0;
+    position: relative;
+}
+
+.site-main .brand-area .experience-area .years-area .years{
+    font: normal bold 84px/40px var(--nunito_sans);
+    color: var(--primary-color);
+    z-index: 2;
+}
+
+.site-main .brand-area .experience-area .years-area h2 > span{
+    font: normal 600 22px/30px var(--nunito_sans);
+}
+
+.site-main .brand-area .experience-area .call-area{
+    padding-left: 10rem;
+}
+
+.site-main .brand-area .experience-area .social a {
+    padding: 10px;
+    font-size: 30px;
+    color: rgb(54, 54, 54);
+}
+
+.site-main .brand-area .experience-area .social a:hover {
+    color: rgb(86, 135, 199);;
+}
+
+/* End Brand Area */ 
+
+/* Services Area */ 
+
+.site-main .services-area{
+    padding: 7rem 1rem;
+}
+
+.site-main .services-area .services-list{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.site-main .services-area .services-title{
+    padding: 0 14rem;
+}
+
+.site-main .services-area .services-title h1{
+    font: normal bold 49px/ 60px 'Dela Gothic One';
+    letter-spacing: 5px;
+    color: rgb(222, 228, 248);
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+
+.site-main > .services-area .services{
+    background: rgba(248, 252, 253, 0.973);
+    padding: 2rem 0;
+    width: 16rem;
+    margin: 2rem 1rem;
+    transition: box-shadow .4s ease;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 2px #00000008;
+}
+
+.site-main > .services-area p.para {
+    max-width: 75%;
+    margin: 15px auto 0 auto;
+}
+
+.site-main > .services-area .services:hover{
+    box-shadow: var(--box-shadow);
+}
+
+/* End Services Area */ 
+
+
+/* Project Area */ 
+
+.site-main .project-area{
+    padding: 4rem 0;
+}
+
+.site-main .project-area .project-title h1 {
+    font: normal bold 49px/ 60px 'Dela Gothic One';
+    letter-spacing: 4px;
+    color: rgb(222, 228, 248);
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000
+}
+
+.site-main .project-area .button-group button{
+    background: transparent;
+    border: none;
+    font: normal 500 16px/130px var(--nunito_sans);
+    text-transform: uppercase;
+}
+
+.site-main .project-area .button-group button + button{
+    padding-left: 3rem;
+}
+
+.site-main .project-area .grid .our-project > .title h4{
+    font: normal 700 25px/27px var(--nunito_sans);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    white-space: normal;
+}
+
+.site-main .project-area .grid .our-project a img {
+    transition: filter 0.3s ease-in-out;
+}
+
+.site-main .project-area .grid .our-project a img.img-border {
+    border-radius: 20px;
+}
+
+.site-main .project-area .grid .our-project .img a:hover img{
+    filter: drop-shadow(1px 8px 30px #b1afaf);
+}
+
+
+/* End Project Area */ 
+
+
+/* About Me */ 
+
+.site-main .about-area .about-title p{
+    padding: 1rem 7rem;
+}
+
+.site-main .about-area .about-title h1{
+    font: normal bold 49px/ 60px 'Dela Gothic One';
+    color: rgb(222, 228, 248);
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000
+}
+
+.site-main .about-area .client{
+    background: #ffffff10;
+    box-shadow: var(--box-shadow);
+    margin: 3rem 0rem;
+}
+
+.site-main .about-area .client .client-img{
+    padding: 2rem;
+}
+
+.site-main .about-area .client .about-client{
+    padding-top: 2rem;
+}
+
+.site-main .about-area .client .about-client h4{
+    font: normal 500 21px/ 20px var(--nunito_sans);
+}
+
+.site-main .about-area .client .about-client p{
+    font-size: 14px;
+}
+
+.site-main .about-area .owl-carousel .owl-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.site-main .about-area .owl-carousel .owl-dots .owl-dot.active span{
+    background: var(--primary-color);
+    width: 12px;
+    height: 12px;
+}
+
+
+
+/* End About Me */ 
+
+
+/* Footer Area */ 
+
+footer.footer-area{
+    padding: 5rem 0;
+    background: url(../img/footer-bg.png) no-repeat;
+}
+
+footer.footer-area .social h5{
+    font: normal 500 23px/ 30px var(--nunito_sans);
+}
+
+footer.footer-area .social a > i{
+    font-size:22px;
+    padding: 2rem;
+    color: #201f1f8a;
+}
+
+footer.footer-area .social a:hover > i{
+    color: var(--primary-color);
+}
+
+
+/* End Footer */ 
+
+
+/* Loader */
+
+#preloader {
+    background: #fff;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    transition: left 1s;
+}
+
+#preloader .outer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.infinityChrome {
+    width: 128px;
+    height: 60px;
+}
+
+.infinityChrome div {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #FF4C60;
+    box-shadow: 2px 2px 8px rgba(255, 76, 96, 0.09);
+    border-radius: 50%;
+    animation: moveSvg 6.9s linear infinite;
+    -webkit-filter: url(#goo);
+    filter: url(#goo);
+    transform: scaleX(-1);
+    offset-path: path("M64.3636364,29.4064278 C77.8909091,43.5203348 84.4363636,56 98.5454545,56 C112.654545,56 124,44.4117395 124,30.0006975 C124,15.5896556 112.654545,3.85282763 98.5454545,4.00139508 C84.4363636,4.14996252 79.2,14.6982509 66.4,29.4064278 C53.4545455,42.4803627 43.5636364,56 29.4545455,56 C15.3454545,56 4,44.4117395 4,30.0006975 C4,15.5896556 15.3454545,4.00139508 29.4545455,4.00139508 C43.5636364,4.00139508 53.1636364,17.8181672 64.3636364,29.4064278 Z");
+}
+
+.infinityChrome div:nth-child(2) {
+    animation-delay: -2.3s;
+}
+
+.infinityChrome div:nth-child(3) {
+    animation-delay: -4.6s;
+}
+
+.infinityChrome div:before {
+    animation: drop1 0.8s linear infinite;
+}
+
+.infinityChrome div:after {
+    animation: drop2 0.8s linear infinite 0.4s;
+}
+
+.infinityChrome div:before, 
+.infinityChrome div:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    background: inherit;
+    top: 50%;
+    left: 50%;
+    margin: -7px 0 0 -7px;
+    box-shadow: inherit;
+}
+
+.infinity {
+    width: 120px;
+    height: 60px;
+    position: relative;
+}
+
+.infinity div {
+    top: 0;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    animation: rotate 6.9s linear infinite;
+}
+
+.infinity div, 
+.infinity span {
+    position: absolute;
+}
+
+.infinity div:nth-child(2) {
+    animation-delay: -2.3s;
+}
+
+.infinity div:nth-child(3) {
+    animation-delay: -4.6s;
+}
+
+.infinity div span {
+    left: -8px;
+    top: 50%;
+    margin: -8px 0 0 0;
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: #FF4C60;
+    box-shadow: 2px 2px 8px rgba(255, 76, 96, 0.09);
+    border-radius: 50%;
+    transform: rotate(90deg);
+    animation: move 6.9s linear infinite;
+}
+.infinity div, 
+.infinity span {
+    position: absolute;
+}
+
+.infinity div span:before {
+    animation: drop1 0.8s linear infinite;
+}
+
+.infinity div span:after {
+    animation: drop2 0.8s linear infinite 0.4s;
+}
+
+.infinity div span:before, 
+.infinity div span:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    background: inherit;
+    top: 50%;
+    left: 50%;
+    margin: -7px 0 0 -7px;
+    box-shadow: inherit;
+}
+
+.infinity div:nth-child(2) span {
+    animation-delay: -2.3s;
+}
+
+.infinity div:nth-child(3) span {
+    animation-delay: -4.6s;
+}
+
+.goo-outer {
+    display: none;
+}
+
+
+@keyframes moveSvg {
+    0% {
+        offset-distance: 0%;
+    }
+    25% {
+        background: #877fcc;
+    }
+    75% {
+        background: yellow;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+}
+
+@keyframes rotate {
+    50% {
+        transform: rotate(360deg);
+        margin-left: 0;
+    }
+    50.0001%,
+    100% {
+        margin-left: -60px;
+    }
+}
+
+@keyframes move {
+    0%,50% {
+        left: -8px;
+    }
+    25% {
+        background: yellow;
+    }
+    75% {
+        background: #877fcc;
+    }
+    50.0001%,
+    100% {
+        left: auto;
+        right: -8px;
+    }
+}
+
+@keyframes drop1 {
+    100% {
+        transform: translate(32px, 8px) scale(0);
+    }
+}
+
+@keyframes drop2 {
+    0% {
+        transform: translate(0, 0) scale(.9);
+    }
+    100% {
+        transform: translate(32px, -8px) scale(0);
+    }
+}
+
+/* End Loader */
+
+
+@media screen and (max-width: 840px) {
+    .site-main .site-banner {
+        background: none;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .site-main .site-banner {
+        background: none;
+    }
+    .site-main .site-banner .site-title h1{
+        font-size: 3.2rem;
+        padding-top: 35%;
+    }
+    
+    .site-main .site-banner .site-title h4{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .site-main .site-banner .site-title h1{
+        font-size: 2.5rem;
+        padding-top: 35%;
+    }
+    .site-main .site-banner .site-title h4{
+        font-size: 1.1rem;
+    }
+    .site-main > .services-area .services{
+        margin: 2rem 0;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .site-main .site-banner .site-title h1{
+        font-size: 2.2rem;
+        padding-top: 35%;
+    }
+    .site-main .site-banner .site-title h4{
+        font-size: 1rem;
+    }
+}

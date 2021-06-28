@@ -1,124 +1,581 @@
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bienvenue sur mon Portfolio, vous y retrouverez mon parcours, mes compétences ainsi que mes projets. Olivier SIMONNEAU, étudiant en informatique | Pays de la Loire, France">
-    <meta name="author" content="Olivier Simonneau">
-    <meta name="keywords" content="Portfolio, Olivier Simonneau, Stage, Programmation, Développeur Web, CV, Nantes, France, Web, Développement, Site web, Programmation" />
-    <title>Portfolio Olivier Simonneau</title>
-    <link rel="stylesheet" href="./css/index/index.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" />
-    <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Olivier Simonneau - Portfolio</title>
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <!--  Bootstrap css file  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!--  font awesome icons  -->
+    <!-- <link rel="stylesheet" href="./css/all.min.css"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+    <!--  Magnific Popup css file  -->
+    <link rel="stylesheet" href="./vendor/Magnific-Popup/dist/magnific-popup.css">
+
+
+    <!--  Owl-carousel css file  -->
+    <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.theme.default.min.css">
+
+
+    <!--  custom css file  -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!--  Responsive css file  -->
+    <link rel="stylesheet" href="./css/responsive.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
 </head>
 
 <body>
-    <div id="container">
-        <section id="presentation">
-            <nav>
-                <div class="nav-links">
-                    <a href="#presentation" class="links active">A Propos De Moi</a>
-                    <a href="#competence" class="links">Compétences</a>
-                    <a href="#career" class="links">Parcours</a>
-                    <a href="#quality" class="links">Qualités</a>
-                    <a href="#project" class="links">Mes Projets</a>
-                    <a href="contact" class="links">Contact</a>
+    <!--  ======================= Start Custom Cursor ============================== -->
+    <img class="cursor" src="./img/cursor.png"></span>
+    <span class="cursor_hover">•</span>
+    <!--  ======================= End Custom Cursor ============================== -->
+
+    <!--  ======================= Start Loader ============================== -->
+    <div id="preloader">
+        <div class="outer">
+            <!-- Google Chrome -->
+            <div class="infinityChrome">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+    
+            <!-- Safari and others -->
+            <div class="infinity">
+                <div>
+                    <span></span>
+                </div>
+                <div>
+                    <span></span>
+                </div>
+                <div>
+                    <span></span>
+                </div>
+            </div>
+            <!-- Stuff -->
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo-outer">
+                <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"></feGaussianBlur>
+                        <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+                        <feBlend in="SourceGraphic" in2="goo"></feBlend>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+    </div>
+    <!--  ======================= End Loader ============================== -->
+
+    <!--  ======================= Start Header Area ============================== -->
+    <header class="header_area">
+        <div class="main-menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#"><img src="./img/logo.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item" aria-expanded="true" data-toggle="collapse" data-target="#navbarNav">
+                            <a class="nav-link cursor-links" href="#home">Accueil</span></a>
+                        </li>
+                        <li class="nav-item" aria-expanded="true" data-toggle="collapse" data-target="#navbarNav">
+                            <a class="nav-link cursor-links" href="#a-propos">A propos</a>
+                        </li>
+                        <li class="nav-item" aria-expanded="true" data-toggle="collapse" data-target="#navbarNav">
+                            <a class="nav-link cursor-links" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item" aria-expanded="true" data-toggle="collapse" data-target="#navbarNav">
+                            <a class="nav-link cursor-links" href="#portfolio">Projets</a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
-            <h1>Olivier Simonneau</h1>
-            <h2>Étudiant en 3ème année d'école d'ingénieurs en informatique<br>Spécialisé dans le Développement Web</h2>
-            <span class="page_number">01</span>
-            <a class="scrollButton" href="#competence"><span></span>Scroll</a>
-            <svg id="bigTriangleColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="125" viewBox="0 0 100 102" preserveAspectRatio="none">
-                <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
-                    <stop class="main-stop" offset="0%" />
-                    <stop class="alt-stop" offset="100%" />
-                  </linearGradient>
-                <path d="M0 0 L50 100 L100 0 Z" fill="url(#gradient)" stroke="url(#gradient)"/>
-            </svg>
-        </section>
-        <section id="competence">
-            <h2>Mes compétences</h2>
-            <div class="square full_square" id="first__floor">
-                <div class="square_bg">
-                    <img src="./images/html5.png" alt="HTML 5" height="80px" id="first__img">
-                    <img src="./images/css3.png" alt="CSS 3" height="80px" id="first__img">
-                    <img src="./images/javascript.png" alt="Javascript" height="80px" id="first__img">
-                </div>
-                <div class="annotation"><span>Intégration Web</span></div>
-            </div>
-            <div class="square" id="second__floor">
+        </div>
+    </header>
+    <!--  ======================= End Header Area ============================== -->
+
+    <!--  ======================= Start Main Area ================================ -->
+    <main class="site-main" id="home">
+
+
+        <!--  ======================= Start Banner Area =======================  -->
+        <section class="site-banner">
+            <div class="container">
                 <div class="row">
-                    <div class="small__square">
-                        <img src="./images/php.png" alt="PHP" height="80px">
+                    <div class="col-lg-6 col-md-12 site-title wow fadeInUp" data-wow-duration="2s">
+                        <h1 class="title-text text-uppercase">Olivier Simonneau</h1>
+                        <h4 class="title-text text-uppercase">Junior Développeur Web.</h4>
+                        <h4 class="title-text text-uppercase">Ingénieur diplomé en 2023.</h4>
                     </div>
-                    <div class="small__square">
-                        <img src="./images/nodejs.png" alt="NodeJS" height="80px">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="small__square">
-                        <img src="./images/symfony.png" alt="Symfony" height="80px">
-                    </div>
-                    <div class="small__square">
-                        <img src="./images/Laravel.png" alt="Laravel" height="80px">
+                    <div class="col-lg-6 col-md-12 banner-image wow fadeInUp" data-wow-duration="2s">
+                        <img src="./img/banner/programming.gif" alt="Image bannière" class="img-fluid">
                     </div>
                 </div>
-                <div class="annotation"><span>Back-End</span></div>
             </div>
-            <div class="square full_square" id="third__floor">
-                <div class="square_bg">
-                    <img src="./images/mariadb.png" alt="MariaDB" height="80px" id="second__img">
-                    <img src="./images/mysql.png" alt="MySQL" height="80px" id="second__img">
-                    <img src="./images/sgbd.png" alt="SGBD" height="80px" id="second__img">
-                </div>
-                <div class="annotation"><span>Base de données</span></div>
-            </div>
-            <div class="square" id="fourth__floor">
+        </section>
+        <!--  ======================= End Banner Area =======================  -->
+
+        <!--  ========================= About Area ==========================  -->
+        <section class="about-area" id="a-propos">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="small__square">
-                        <img src="./images/windows.png" alt="Windows" height="80px">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-image wow fadeInLeft" data-wow-duration="2s">
+                            <img src="./img/about-me.gif" alt="A propos de moi" class="img-fluid">
+                        </div>
                     </div>
-                    <div class="small__square">
-                        <img src="./images/linux.png" alt="Linux" height="80px">
+                    <div class="col-lg-6 col-md-12 about-title wow fadeIn" data-wow-duration="3s">
+                        <h2 class="text-uppercase">
+                            <span>A propos</span>
+                            <span>de Moi</span>
+                        </h2>
+                        <div class="paragraph py-4">
+                            <p class="para">
+                              Dix-neuf ans et passionné par l'informatique, c'est dans ce domaine que je réalise actuellement mes études au CESI - École d'Ingénieurs. Je me concentre sur l'apprentissage et la découverte des technologies du Web afin de pouvoir répondre à la demande actuelle.
+                            </p>
+                            <p class="para">
+                                Organisé, autonome et polyvalent sont les maîtres mots de mon caractère professionel, j'ai l'habitude de m'adapter et de réagir en fonction de l'environnement dans lequel je me trouve. Avide d'expériences et de nouvelles connaissances, j'ai pour objectif de continuer ma formation dans le développement d'applications Web et en particulier de m'intéresser de plus près à l'intégration de la 3D dans celles-ci.
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <form method="get" action="./img/CV Olivier SIMONNEAU.pdf" target="_blank" >
+                                <button type="submit" class="btn button primary-button text-uppercase cursor-links">Voir mon Curriculum Vitæ</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <!--  ========================= End About Area ==========================  -->
+
+
+        <!--  ====================== Start Services Area =============================  -->
+        <section class="services-area" id="services">
+            <div>
                 <div class="row">
-                    <div class="small__square">
-                        <img src="./images/vmware.png" alt="VMware" height="80px">
-                    </div>
-                    <div class="small__square">
-                        <img src="./images/docker.png" alt="Docker" height="80px">
+                    <div class="col-lg-12 text-center services-title">
+                        <h1 class="text-uppercase title-text">Mes services</h1>
+                        <p class="para">
+                            Je vous accompagne en vous proposant un service ajustable pour vos différents budgets que ce soit pour la création d’un nouveau site ou pour la maintenance de votre site actuel.
+                        </p>
                     </div>
                 </div>
-                <div class="annotation"><span>OS - Virtualisation - Conteneurisation</span></div>
+                <div class="services-list">
+                    <div class="services wow fadeInRight" data-wow-duration="1s">
+                        <div class="sevices-img text-center py-4">
+                            <img src="./img/services/s3.png" alt="Services-1">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-uppercase">Développement Site Vitrine</h5>
+                            <p class="card-text text-secondary">
+                                La création d’un site vitrine sur mesure permet de s’assurer une véritable présence sur Internet et de renforcer sa crédibilité auprès des internautes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services wow fadeInRight" data-wow-delay=".5s" data-wow-duration="1s">
+                        <div class="sevices-img text-center py-4">
+                            <img src="./img/services/s2.png" alt="Services-2">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-uppercase">Développement Wordpress</h5>
+                            <p class="card-text text-secondary">
+                                Une solution Wordpress clé en main vous offre une interface d'administration complète permettant de gérer vos contenus et vos mises à jour en toute autonomie.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services wow fadeInRight" data-wow-delay="1s" data-wow-duration="1s">
+                        <div class="sevices-img text-center py-4">
+                            <img src="./img/services/s1.png" alt="Services-3">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-uppercase">Maintenance Wordpress</h5>
+                            <p class="card-text text-secondary">
+                                Le mise à jour des composants de Wordpress permet de s'assurer de la bonne santé et d'une sécurité maximale pour votre site Internet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services wow fadeInRight" data-wow-delay="1.5s" data-wow-duration="1s">
+                        <div class="sevices-img text-center py-4">
+                            <img src="./img/services/s4.png" alt="Services-4">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-uppercase">Référencement & SEO</h5>
+                            <p class="card-text text-secondary">
+                                Le référencement a pour objectif d'intégrer et de positionner votre site internet en tête des classements des moteurs de recherche afin de générer le plus fort trafic.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  ====================== End Services Area =============================  -->
+
+
+        <!--  ======================== Brand Area ==============================  -->
+        <section class="brand-area wow fadeIn" id="competences" data-wow-duration="3s" data-wow-offset="10">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-12 col-md-12">
+                        <div class="first-row row">
+                            <div class="col-lg-4 col-6">
+                                <div class="single-brand javascript-brand">
+                                    <img src="./img/brands/logo1.png" alt="Javascript">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6">
+                                <div class="single-brand php-brand">
+                                    <img src="./img/brands/logo2.png" alt="PHP">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6">
+                                <div class="single-brand css-brand">
+                                    <img src="./img/brands/logo3.png" alt="CSS 3">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6">
+                                <div class="single-brand symfony-brand">
+                                    <img src="./img/brands/logo4.png" alt="Symfony">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6">
+                                <div class="single-brand wordpress-brand">
+                                    <img src="./img/brands/logo5.png" alt="Wordpress">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6">
+                                <div class="single-brand html-brand">
+                                    <img src="./img/brands/logo6.png" alt="HTML 5">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6">
+                                <div class="single-brand java-brand">
+                                    <img src="./img/brands/logo7.png" alt="Java">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6">
+                                <div class="single-brand cplusplus-brand">
+                                    <img src="./img/brands/logo8.png" alt="C++ ">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6">
+                                <div class="single-brand et-plus-brand">
+                                    <img src="./img/brands/logo9.png" alt="Et plus encore">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-md-12 d-flex align-items-center justify-content-center">
+                        <div class="experience-area">
+                            <div class="d-flex flex-row years-area">
+                                <h2 class="p-3 years">2</h2>
+                                <h2>
+                                    <span>ANNÉES</span>
+                                    <span>D'EXPÉRIENCES</span>
+                                </h2>
+                            </div>
+
+                            <div class="d-flex flex-row years-area">
+                                <h2 class="p-3 years">10+</h2>
+                                <h2>
+                                    <span>PROJETS</span>
+                                    <span>TERMINÉS</span>
+                                </h2>
+                            </div>
+                            <div class="social text-center">
+                                <a href="https://www.linkedin.com/in/olivier-simonneau-pro/" class="cursor-links"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com/OlivierS7" class="cursor-links"><i class="fab fa-github"></i></a>
+                                <a href="https://olivier-simonneau.fr" class="cursor-links"><i class="fas fa-globe"></i></a>
+                                <a href="mailto:pro@olivier-simonneau.fr" class="cursor-links"><i class="fas fa-at"></i></a>
+                                <a href="tel:+33761587715" class="cursor-links"><i class="fas fa-mobile-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  ======================== End Brand Area ==============================  -->
+
+        <!--  ======================= Project Area =============================  -->
+        <section class="project-area" id="portfolio">
+            <div class="container">
+                <div class="project-title pb-5">
+                    <h1 class="text-uppercase title-h1 wow fadeIn">Projets Récemment Réalisés</h1>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" class="active" id="btn1" data-filter="*">Tous</button>
+                    <button type="button" data-filter=".popular">Populaire</button>
+                    <button type="button" data-filter=".latest">Récent</button>
+                    <button type="button" data-filter=".following">Terminé</button>
+                    <button type="button" data-filter=".upcoming">A Venir</button>
+                </div>
+
+                <div class="row grid">
+                    <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming popular">
+                        <div class="our-project wow fadeInLeft" data-wow-duration="1s">
+                            <div class="img">
+                                <a class="test-popup-link" href="./img/portfolio/casatotem.png">
+                                    <img src="./img/portfolio/casatotem.png" alt="Casatotem" class="img-fluid img-border">
+                                </a>
+                            </div>
+                            <div class="title py-4">
+                                <h4 class="text-uppercase">Casatotem<br/>Configurateur 3D</h4>
+                                <span class="text-secondary">Développement d'un Configurateur 3D de canapé en Three.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
+                        <div class="our-project wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">
+                            <div class="img">
+                                <a class="test-popup-link" href="./img/portfolio/solidarityBond.jpg">
+                                    <img src="./img/portfolio/solidarityBond.jpg" alt="SolidarityBond" class="img-fluid img-border">
+                                </a>
+                            </div>
+                            <div class="title py-4">
+                                <h4 class="text-uppercase">SolidarityBond</h4>
+                                <span class="text-secondary">Développement d'un site web sous Symfony afin d'aider à lutter contre la crise du Covid-19</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming popular">
+                        <div class="our-project wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+                            <div class="img">
+                                <a class="test-popup-link" href="./img/portfolio/sd-sophrologue.png">
+                                    <img src="./img/portfolio/sd-sophrologue.png" alt="SD Sophrologue" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="title py-4">
+                                <h4 class="text-uppercase">SD Sophrologue</h4>
+                                <span class="text-secondary">Développement d'un site de réservation de séances de sophrologie sous Wordpress</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 element-item following latest">
+                        <div class="our-project wow fadeInLeft" data-wow-duration="1s">
+                            <div class="img">
+                                <a class="test-popup-link" href="./img/portfolio/portfolio.jpeg">
+                                    <img src="./img/portfolio/portfolio.jpeg" alt="Portfolio" class="img-fluid img-border">
+                                </a>
+                            </div>
+                            <div class="title py-4">
+                                <h4 class="text-uppercase">Portfolio</h4>
+                                <span class="text-secondary">Développement de mon site personnel de présentation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
+                        <div class="our-project wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">
+                            <div class="img">
+                                <a class="test-popup-link" href="./img/portfolio/boulder-dash.png">
+                                    <img src="./img/portfolio/boulder-dash.png" alt="Boulder Dash" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="title py-4">
+                                <h4 class="text-uppercase">Boulder Dash</h4>
+                                <span class="text-secondary">Développement du jeu Boulder Dash en Java</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
+                        <div class="our-project wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+                            <div class="img">
+                                <a class="test-popup-link" href="./img/portfolio/electrocardiogramme.png">
+                                    <img src="./img/portfolio/electrocardiogramme.png" alt="Electrocardiogramme" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="title py-4">
+                                <h4 class="text-uppercase">Electrocardiogramme</h4>
+                                <span class="text-secondary">Photopléthysmographie à l'aide de capteur infrarouge et analyse des données via une carte Arduino</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
+                        <div class="our-project wow fadeInLeft" data-wow-duration="1s">
+                            <div class="img">
+                                <a class="test-popup-link" href="./img/portfolio/animus.png">
+                                    <img src="./img/portfolio/animus.png" alt="Animus" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="title py-4">
+                                <h4 class="text-uppercase">Animus</h4>
+                                <span class="text-secondary">Mise en place d'une infrastructure réseau (DMZ, Serveurs applicatifs, Active Directory, pfSense, contrôleur de domaine...)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
+                        <div class="our-project wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">
+                            <div class="img">
+                                <a class="test-popup-link" href="./img/portfolio/robot.jpg">
+                                    <img src="./img/portfolio/robot.jpg" alt="Robot Pathfinding" class="img-fluid img-border">
+                                </a>
+                            </div>
+                            <div class="title py-4">
+                                <h4 class="text-uppercase">Robot Pathfinding</h4>
+                                <span class="text-secondary">Réalisation d'un robot connecté trouvant le chemin le plus rapide d'un point A à un point B. Envoi de données à une interface en temps réel</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 element-item following latest popular">
+                        <div class="our-project wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+                            <div class="img">
+                                <a class="test-popup-link" href="./img/portfolio/easysave.png">
+                                    <img src="./img/portfolio/easysave.png" alt="EasySave" class="img-fluid img-border">
+                                </a>
+                            </div>
+                            <div class="title py-4">
+                                <h4 class="text-uppercase">EasySave</h4>
+                                <span class="text-secondary">Développement d'un logiciel de sauvegarde complète et incrémentielle automatisée en C++</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  ======================= End Project Area =============================  -->
+
+        <!--  ======================== About Me Area ==============================  -->
+        <section class="about-area">
+            <div class="container carousel py-lg-5">
+                <div class="owl-carousel owl-theme">
+                    <div class="client row">
+                        <div class="col-lg-4 col-md-12 client-img">
+                            <img src="./img/testimonials/homme.png" alt="Image Homme" class="img-fluid">
+                        </div>
+                        <div class="col-lg-8 col-md-12 about-client">
+                            <h4 class="text-uppercase">Baptiste S.</h4>
+                            <p class="para">Un jeune homme mature, enthousiaste et agréable. Organisé et productif, d'un point de vue technique Olivier a un très bon niveau. Il sait être très autonome et n'hésite pas à demande plus de détails quand cela est nécessaire.</p>
+                        </div>
+                    </div>
+                    <div class="client row">
+                        <div class="col-lg-4 col-md-12 client-img">
+                            <img src="./img/testimonials/homme.png" alt="Image Homme" class="img-fluid">
+                        </div>
+                        <div class="col-lg-8 col-md-12 about-client">
+                            <h4 class="text-uppercase">Xavier L.</h4>
+                            <p class="para">Ce fut un réel plaisir de travailler avec Olivier. Son esprit d’analyse, sa réactivité ainsi que ses connaissances techniques ont été très utiles aux différentes problématiques rencontrées.</p>
+                        </div>
+                    </div>
+                    <div class="client row">
+                        <div class="col-lg-4 col-md-12 client-img">
+                            <img src="./img/testimonials/homme.png" alt="Image Homme" class="img-fluid">
+                        </div>
+                        <div class="col-lg-8 col-md-12 about-client">
+                            <h4 class="text-uppercase">Julien G.</h4>
+                            <p class="para">Olivier est dynamique et réactif sur les différents projets en sa possession. Il est un très bon contact, possède une bonne écoute des demandes et as de très bonnes capacités pour le métier.</p>
+                        </div>
+                    </div>
+                    <div class="client row">
+                        <div class="col-lg-4 col-md-12 client-img">
+                            <img src="./img/testimonials/homme.png" alt="Image Homme" class="img-fluid">
+                        </div>
+                        <div class="col-lg-8 col-md-12 about-client">
+                            <h4 class="text-uppercase">Arnaud B.</h4>
+                            <p class="para">Olivier est très dynamique, volontaire et débrouillard tout au long de son travail, ce sont des qualités qui sont très bonne à avoir dans ce métier.</p>
+                        </div>
+                    </div>
+                    <div class="client row">
+                        <div class="col-lg-4 col-md-12 client-img">
+                            <img src="./img/testimonials/femme.png" alt="Image Femme" class="img-fluid">
+                        </div>
+                        <div class="col-lg-8 col-md-12 about-client">
+                            <h4 class="text-uppercase">Julie</h4>
+                            <p class="para">Olivier est une personne responsable, consciencieuse et très professionnelle. Il a su s'intégrer dans l'équipe de développement et apporter ses connaissances très rapidement.</p>
+                        </div>
+                    </div>
+                    <div class="client row">
+                        <div class="col-lg-4 col-md-12 client-img">
+                            <img src="./img/testimonials/femme.png" alt="Image Femme" class="img-fluid">
+                        </div>
+                        <div class="col-lg-8 col-md-12 about-client">
+                            <h4 class="text-uppercase">Sabrina D.</h4>
+                            <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem architecto
+                                consequuntur ratione, obcaecati corrupti deserunt.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <span class="page_number">02</span>
-            <a class="scrollButton" href="#career"><span></span>Scroll</a>
         </section>
-        <section id="career">
 
-            <span class="page_number">03</span>
-            <a class="scrollButton" href="#quality"><span></span>Scroll</a>
-        </section>
-        <section id="quality">
+        <!--  ======================== End About Me Area ==============================  -->
+    </main>
+    <!--  ======================= End Main Area ================================ -->
 
-            <span class="page_number">04</span>
-            <a class="scrollButton" href="#project"><span></span>Scroll</a>
-        </section>
-        <section id="project">
+    <footer class="footer-area">
+        <div class="container">
+            <div class="">
+                <div class="site-logo text-center py-4">
+                    <img src="./img/logo.png" alt="logo">
+                </div>
+                <div class="social text-center">
+                    <a href="https://www.linkedin.com/in/olivier-simonneau-pro/" class="cursor-links"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/OlivierS7" class="cursor-links"><i class="fab fa-github"></i></a>
+                    <a href="https://olivier-simonneau.fr" class="cursor-links"><i class="fas fa-globe"></i></a>
+                    <a href="mailto:pro@olivier-simonneau.fr" class="cursor-links"><i class="fas fa-at"></i></a>
+                    <a href="tel:+33761587715" class="cursor-links"><i class="fas fa-mobile-alt"></i></a>
+                </div>
+                <div class="copyrights text-center">
+                    <p class="para">
+                        Copyright ©2021 Tous droits réservés | Créé et développé par 
+                        <a href="https://olivier-simonneau.fr" class="cursor-links"><span style="color: var(--primary-color);">Olivier SIMONNEAU</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-            <span class="page_number">05</span>
-        </section>
-        <footer id="contact">
 
-        </footer>
-    </div>
-    <script type="text/javascript" src="./js/scroll.js"></script>
-    <script type="text/javascript" src="./js/animate.js"></script>
+    <!--  Jquery js file  -->
+    <script src="./js/jquery.3.4.1.js"></script>
+
+    <!--  Bootstrap js file  -->
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!--  isotope js library  -->
+    <script src="./vendor/isotope/isotope.min.js"></script>
+
+    <!--  Magnific popup script file  -->
+    <script src="./vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+
+    <!--  Owl-carousel js file  -->
+    <script src="./vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+    <!--  custom js file  -->
+    <script src="./js/main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      wow = new WOW(
+        {
+            boxClass:     'wow',
+            animateClass: 'animated',
+            offset:       0,
+            mobile:       false,
+            live:         true
+        }
+    )
+    wow.init();
+    </script>
+
+
 </body>
 
 </html>

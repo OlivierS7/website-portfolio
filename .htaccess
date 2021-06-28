@@ -1,6 +1,6 @@
-RewriteEngine on
-Rewritecond %{REQUEST_URI} !^/image
-Rewritecond %{REQUEST_URI} !^/js
-Rewritecond %{REQUEST_URI} !^/css
-Rewritecond %{REQUEST_URI} !^/static
-Rewriterule .* index.php
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} ^olivier-simonneau\.fr [OR]
+RewriteCond %{HTTP_HOST} ^www\.olivier-simonneau\.fr
+RewriteRule .* https://olivier-simonneau.fr%{REQUEST_URI} [R=301,L]

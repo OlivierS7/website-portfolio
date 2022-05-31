@@ -57,13 +57,36 @@
 
 body {
     overflow-x: hidden;
+    background: url(../img/banner/home-banner.png) repeat-y 0% 50%;
 }
 
 body, a, button {
     cursor: none;
 }
 
-/* start navigation */ 
+.site-main {
+    background: #ffffff61;
+}
+
+/* Start WebGL */
+
+#webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#character
+{
+    width: 100%;
+    height: 100%;
+}
+
+/* End WebGL */
+
+/* Start navigation */ 
 
 .nav-item {
     display: flex;
@@ -72,7 +95,6 @@ body, a, button {
 
 .header_area .main-menu {
     position: fixed;
-    top: 0;
     width: 100vw;
     background-color: rgba(255, 255, 255, 0.747);
     z-index: 10;
@@ -84,8 +106,8 @@ body, a, button {
 }
 
 .header_area .main-menu .navbar-brand img{
-    width: 70%;
-    height: 70%;
+    width: 40%;
+    height: 40%;
 }
 
 .header_area .main-menu .nav-item .nav-link{
@@ -103,29 +125,24 @@ body, a, button {
 }
 
 
-/* end navigation */ 
-
-html {
-    scroll-snap-type: y proximity;
-}
-
-section.contact-area {
-    scroll-snap-align: start;
-}
+/* End navigation */ 
 
 /* Banner Area */ 
 .site-main .site-banner {
-    background: url(../img/banner/home-banner.png) no-repeat 0% 50%;
-    min-height: 80vh;
     padding-top: 200px;
 }
 
 .site-main .site-banner .container {
-    min-height: 100vh;
+    min-height: 50vh;
+}
+
+.site-main .site-banner .site-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .site-main .site-banner .site-title h1{
-    padding-top: 35%;
     font: normal bold 50px/ 72px 'Dela Gothic One';
     letter-spacing: 3px;
     font-size: 3.6rem;
@@ -146,11 +163,14 @@ section.contact-area {
     line-height: 20px;
 }
 
-
+.site-main .site-banner .banner-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .site-main .site-banner .banner-image > img{
-    padding: 7rem 0;
-    width: 90rem;
+    width: 20rem;
 }
 
 /* End Banner Area */ 
@@ -159,6 +179,17 @@ section.contact-area {
 
 .site-main .about-area{
     padding: 4rem 5rem;
+}
+
+.site-main .about-area .about-image {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-main .about-area .about-image > img{
+    width: 30rem;
 }
 
 .site-main .about-area .about-title {
@@ -203,63 +234,67 @@ section.contact-area {
     margin: .9rem 0;
     width: 180px;
     height: 100px;
-    /* cursor: pointer; */
     transition: transform .4s ease;
+    background: #fff;
 }
 
-.site-main .brand-area .first-row .col-lg-4 > .javascript-brand, 
-.site-main .brand-area .first-row .col-lg-4 > .cplusplus-brand {
-    padding: 0.9rem 0rem;
-}
-.site-main .brand-area .first-row .col-lg-4 > .php-brand{
-    padding: 1.8rem 0rem;
-}
-.site-main .brand-area .first-row .col-lg-4 > .css-brand, 
-.site-main .brand-area .first-row .col-lg-4 > .symfony-brand {
-    padding: 0.8rem 0rem;
-}
-
-.site-main .brand-area .first-row .col-lg-4 > .html-brand{
-    padding: 0.4rem 0rem;
-}
-.site-main .brand-area .first-row .col-lg-4 > .java-brand{
-    padding: 0.3rem 0rem;
-}
-.site-main .brand-area .first-row .col-lg-4 > .et-plus-brand{
-    padding: 2rem 0rem;
+.site-main .brand-area .first-row .col-lg-4 > .angular-brand,
+.site-main .brand-area .first-row .col-lg-4 > .symfony-brand,
+.site-main .brand-area .first-row .col-lg-4 > .threejs-brand,
+.site-main .brand-area .first-row .col-lg-4 > .vuejs-brand,
+.site-main .brand-area .first-row .col-lg-4 > .typescript-brand, 
+.site-main .brand-area .first-row .col-lg-4 > .java-brand,
+.site-main .brand-area .first-row .col-lg-4 > .et-plus-brand,
+.site-main .brand-area .first-row .col-lg-4 > .javascript-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
-.site-main .brand-area .first-row .col-lg-4 > .wordpress-brand > img{
+
+.site-main .brand-area .first-row .col-lg-4 > .typescript-brand > img {
+    width: 90%;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .angular-brand > img {
+    width: 80%;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .threejs-brand > img {
+    width: 80%;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .vuejs-brand > img {
+    width: 75%;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .wordpress-brand > img {
     width: 70%;
 }
-.site-main .brand-area .first-row .col-lg-4 > .et-plus-brand > img{
+
+.site-main .brand-area .first-row .col-lg-4 > .et-plus-brand > img {
     width: 60%;
 }
-.site-main .brand-area .first-row .col-lg-4 > .php-brand > img,
-.site-main .brand-area .first-row .col-lg-4 > .java-brand > img,
-.site-main .brand-area .first-row .col-lg-4 > .html-brand > img {
+
+.site-main .brand-area .first-row .col-lg-4 > .java-brand > img {
     width: 50%;
 }
-.site-main .brand-area .first-row .col-lg-4 > .javascript-brand > img{
+
+.site-main .brand-area .first-row .col-lg-4 > .javascript-brand > img {
     width: 40%;
 }
-.site-main .brand-area .first-row .col-lg-4 > .symfony-brand > img,
-.site-main .brand-area .first-row .col-lg-4 > .cplusplus-brand > img{
+.site-main .brand-area .first-row .col-lg-4 > .symfony-brand > img {
     width: 35%;
 }
-.site-main .brand-area .first-row .col-lg-4 > .css-brand > img{
-    width: 30%;
-}
 
 
-.site-main .brand-area .first-row .col-lg-4 > .single-brand:hover{
+.site-main .brand-area .first-row .col-lg-4 > .single-brand:hover {
     box-shadow: var(--box-shadow);
     transform: scale(1.2);
 }
 
-.site-main .brand-area .experience-area{
+.site-main .brand-area .experience-area {
     padding: 2.5rem 8.5rem 2.5rem 6.5rem;
-    background-color: #ffe2a254;
     clip-path: polygon(85% 8%, 75% 50%, 85% 92%, 25% 92%, 5% 50%, 25% 8%);
 }
 
@@ -273,13 +308,13 @@ section.contact-area {
 }
 
 .site-main .brand-area .experience-area .years-area .years{
-    font: normal bold 84px/40px var(--nunito_sans);
+    font: bold 110px/56px var(--nunito_sans);
     color: var(--primary-color);
     z-index: 2;
 }
 
 .site-main .brand-area .experience-area .years-area h2 > span{
-    font: normal 600 22px/30px var(--nunito_sans);
+    font: 600 28px/40px var(--nunito_sans);
 }
 
 .site-main .brand-area .experience-area .call-area{
@@ -423,7 +458,7 @@ section.contact-area {
 }
 
 .site-main .about-area .client{
-    background: #ffffff10;
+    background: #ffffff;
     box-shadow: var(--box-shadow);
     margin: 3rem 0rem;
 }
@@ -465,7 +500,7 @@ section.contact-area {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 30vh;
     transition: .5s;
 }
 
@@ -488,7 +523,7 @@ section.contact-area {
     top: 50%;
     transform: translate(-50%, -50%);
     font-size: 6em;
-    color: #fff;
+    color: #000000d1;
     pointer-events: none;
     font-weight: 700;
     transition: .5s;
@@ -559,8 +594,13 @@ section.contact-area {
 /* Footer Area */ 
 
 footer.footer-area{
+    background: #ffffff61;
     padding: 5rem 0;
-    background: url(../img/footer-bg.png) no-repeat;
+}
+
+footer.footer-area .site-logo #footer-logo {
+    width: 40%;
+    height: 40%;
 }
 
 footer.footer-area .social h5{
@@ -819,7 +859,7 @@ footer.footer-area .social a:hover > i{
 
 @media screen and (max-width: 500px) {
     .site-main .site-banner .site-title h1{
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         padding-top: 35%;
     }
     .site-main .site-banner .site-title h4{

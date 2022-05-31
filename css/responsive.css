@@ -32,6 +32,11 @@
 
 /* if the viewport is equal to 340px or less than that */ 
 @media only screen and (max-width: 792px){
+    .header_area .main-menu .navbar-brand img{
+        width: 50%;
+        height: 50%;
+    }
+
     .site-main .about-area .about-title h2 > span,
     .site-main .services-area .services-title h1,
     .site-main .about-area .about-title h1,
@@ -75,6 +80,10 @@
 
 
 @media only screen and (max-width: 500px){
+    .header_area .main-menu .navbar-brand img{
+        width: 60%;
+        height: 60%;
+    }
     .site-main .project-area .project-title h1{
         font-size: 27px;
         letter-spacing: 8px;
@@ -91,8 +100,12 @@
     .navbar-nav {
         height: 100%;
     }
+    .navbar-light .navbar-brand {
+        max-width: 60%;
+    }
+
     .nav-item {
-        height: 25%;
+        height: 20%;
     }
     .navbar-collapse {
         height: calc(100vh - 100px);

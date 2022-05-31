@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr-FR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Olivier Simonneau - Portfolio</title>
-
-
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <title>Olivier Simonneau | Portfolio | Junior Développeur</title>
+    <meta name="description" content="Je m'appelle Olivier Simonneau, Junior Développeur Web à Nantes, Ingénieur diplomé en 2023. Voici mon site web portfolio.">
+    <link rel="canonical" href="https://olivier-simonneau.fr/">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
@@ -18,15 +19,9 @@
     <!-- <link rel="stylesheet" href="./css/all.min.css"> -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-
-    <!--  Magnific Popup css file  -->
-    <link rel="stylesheet" href="./vendor/Magnific-Popup/dist/magnific-popup.css">
-
-
     <!--  Owl-carousel css file  -->
     <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.carousel.min.css">
     <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.theme.default.min.css">
-
 
     <!--  Custom css file  -->
     <link rel="stylesheet" href="./css/style.css">
@@ -81,6 +76,12 @@
     </div>
     <!--  ======================= End Loader ============================== -->
 
+    <!--  ======================= Start WebGL ============================== -->
+
+    <canvas id="webgl"></canvas>
+
+    <!--  ======================= End WebGL ============================== -->
+
     <!--  ======================= Start Header Area ============================== -->
     <header class="header_area">
         <div class="main-menu">
@@ -105,6 +106,9 @@
                         <li class="nav-item" aria-expanded="true" data-toggle="collapse" data-target="#navbarNav">
                             <a class="nav-link cursor-links" href="#portfolio">Projets</a>
                         </li>
+                        <li class="nav-item" aria-expanded="true" data-toggle="collapse" data-target="#navbarNav">
+                            <a class="nav-link cursor-links" href="#contact">Contact</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -120,11 +124,14 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-12 site-title wow fadeInUp" data-wow-duration="2s">
                         <h1 class="title-text text-uppercase">Olivier Simonneau</h1>
-                        <h4 class="title-text text-uppercase">Junior Développeur Web.</h4>
-                        <h4 class="title-text text-uppercase">Ingénieur diplomé en 2023.</h4>
+                        <h4 class="title-text text-uppercase">Développeur Web</h4>
+                        <h4 class="title-text text-uppercase">Ingénieur diplomé en 2023</h4>
                     </div>
+                    <!-- <div class="col-lg-6 col-md-12 character-div">
+                        <canvas id="character"></canvas>
+                    </div> -->
                     <div class="col-lg-6 col-md-12 banner-image wow fadeInUp" data-wow-duration="2s">
-                        <img src="./img/banner/programming.gif" alt="Image bannière" class="img-fluid">
+                        <img src="./img/banner/Businessman.png" alt="Image bannière" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -137,7 +144,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <div class="about-image wow fadeInLeft" data-wow-duration="2s">
-                            <img src="./img/about-me.gif" alt="A propos de moi" class="img-fluid">
+                            <img src="./img/about-me.png" alt="A propos de moi" class="img-fluid">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12 about-title wow fadeIn" data-wow-duration="3s">
@@ -147,14 +154,15 @@
                         </h2>
                         <div class="paragraph py-4">
                             <p class="para">
-                              Dix-neuf ans et passionné par l'informatique, c'est dans ce domaine que je réalise actuellement mes études au CESI - École d'Ingénieurs. Je me concentre sur l'apprentissage et la découverte des technologies du Web afin de pouvoir répondre à la demande actuelle.
+                              Vingt ans et passionné par l'informatique, c'est dans ce domaine que je réalise actuellement mes études au CESI - École d'Ingénieurs. Je me concentre sur l'apprentissage et la découverte des technologies du Web afin de pouvoir répondre à la demande actuelle.
                             </p>
                             <p class="para">
                                 Organisé, autonome et polyvalent sont les maîtres mots de mon caractère professionel, j'ai l'habitude de m'adapter et de réagir en fonction de l'environnement dans lequel je me trouve. Avide d'expériences et de nouvelles connaissances, j'ai pour objectif de continuer ma formation dans le développement d'applications Web et en particulier de m'intéresser de plus près à l'intégration de la 3D dans celles-ci.
                             </p>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <form method="get" action="./img/CV Olivier SIMONNEAU.pdf" target="_blank" >
+                            <!-- <form method="get" action="./img/CV Olivier SIMONNEAU.pdf" target="_blank" > -->
+                                <form>
                                 <button type="submit" class="btn button primary-button text-uppercase cursor-links">Voir mon Curriculum Vitæ</button>
                             </form>
                         </div>
@@ -233,48 +241,48 @@
                     <div class="col-xl-6 col-lg-12 col-md-12">
                         <div class="first-row row">
                             <div class="col-lg-4 col-6">
+                                <div class="single-brand angular-brand">
+                                    <img src="./img/brands/angular.png" alt="Angular">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6">
+                                <div class="single-brand typescript-brand">
+                                    <img src="./img/brands/typescript.png" alt="TypeScript">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6">
+                                <div class="single-brand vuejs-brand">
+                                    <img src="./img/brands/vuejs.png" alt="Vue.js">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-6">
                                 <div class="single-brand javascript-brand">
-                                    <img src="./img/brands/logo1.png" alt="Javascript">
+                                    <img src="./img/brands/javascript.png" alt="JavaScript">
                                 </div>
-                            </div>
+                            </div> 
                             <div class="col-lg-4 col-6">
-                                <div class="single-brand php-brand">
-                                    <img src="./img/brands/logo2.png" alt="PHP">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-6">
-                                <div class="single-brand css-brand">
-                                    <img src="./img/brands/logo3.png" alt="CSS 3">
+                                <div class="single-brand threejs-brand">
+                                    <img src="./img/brands/threejs.png" alt="Three.js">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-6">
                                 <div class="single-brand symfony-brand">
-                                    <img src="./img/brands/logo4.png" alt="Symfony">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-6">
-                                <div class="single-brand wordpress-brand">
-                                    <img src="./img/brands/logo5.png" alt="Wordpress">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-6">
-                                <div class="single-brand html-brand">
-                                    <img src="./img/brands/logo6.png" alt="HTML 5">
+                                    <img src="./img/brands/symfony.png" alt="Symfony">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-6">
                                 <div class="single-brand java-brand">
-                                    <img src="./img/brands/logo7.png" alt="Java">
+                                    <img src="./img/brands/java.png" alt="Java">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-6">
-                                <div class="single-brand cplusplus-brand">
-                                    <img src="./img/brands/logo8.png" alt="C++ ">
+                                <div class="single-brand wordpress-brand">
+                                    <img src="./img/brands/wordpress.png" alt="Wordpress">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-6">
                                 <div class="single-brand et-plus-brand">
-                                    <img src="./img/brands/logo9.png" alt="Et plus encore">
+                                    <img src="./img/brands/more.png" alt="Et plus encore">
                                 </div>
                             </div>
                         </div>
@@ -282,7 +290,7 @@
                     <div class="col-xl-6 col-lg-12 col-md-12 d-flex align-items-center justify-content-center">
                         <div class="experience-area">
                             <div class="d-flex flex-row years-area">
-                                <h2 class="p-3 years">2</h2>
+                                <h2 class="p-3 years">3</h2>
                                 <h2>
                                     <span>ANNÉES</span>
                                     <span>D'EXPÉRIENCES</span>
@@ -318,11 +326,11 @@
                     <button type="button" data-filter=".upcoming">A Venir</button>
                 </div>
 
-                <div class="row grid">
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming popular">
-                        <div class="our-project wow fadeInLeft" data-wow-duration="1s">
+                <div class="row grid"  data-wow-duration="1s">
+                    <div class="col-lg-4 col-md-6 col-sm-12 element-item popular latest following">
+                        <div class="our-project wow fadeInLeft">
                             <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/casatotem.png">
+                                <a class="test-popup-link cursor-links" href="https://casatotem.fr/configurateur/" target="_blank">
                                     <img src="./img/portfolio/casatotem.png" alt="Casatotem" class="img-fluid img-border">
                                 </a>
                             </div>
@@ -333,9 +341,9 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
-                        <div class="our-project wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">
+                        <div class="our-project wow fadeInUp">
                             <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/solidarityBond.jpg">
+                                <a class="test-popup-link cursor-links" href="https://github.com/OlivierS7/SolidarityBond" target="_blank">
                                     <img src="./img/portfolio/solidarityBond.jpg" alt="SolidarityBond" class="img-fluid img-border">
                                 </a>
                             </div>
@@ -345,23 +353,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming popular">
-                        <div class="our-project wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+                    <div class="col-lg-4 col-md-6 col-sm-12 element-item latest following popular">
+                        <div class="our-project wow fadeInRight">
                             <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/sd-sophrologue.png">
-                                    <img src="./img/portfolio/sd-sophrologue.png" alt="SD Sophrologue" class="img-fluid">
+                                <a class="test-popup-link cursor-links" href="https://ds-sophrologue.fr" target="_blank">
+                                    <img src="./img/portfolio/sd-sophrologue.png" alt="DS Sophrologue" class="img-fluid">
                                 </a>
                             </div>
                             <div class="title py-4">
-                                <h4 class="text-uppercase">SD Sophrologue</h4>
+                                <h4 class="text-uppercase">DS Sophrologue</h4>
                                 <span class="text-secondary">Développement d'un site de réservation de séances de sophrologie sous Wordpress</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 element-item following latest">
-                        <div class="our-project wow fadeInLeft" data-wow-duration="1s">
+                        <div class="our-project wow fadeInLeft">
                             <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/portfolio.jpeg">
+                                <a class="test-popup-link cursor-links" href="https://olivier-simonneau.fr" target="_blank">
                                     <img src="./img/portfolio/portfolio.jpeg" alt="Portfolio" class="img-fluid img-border">
                                 </a>
                             </div>
@@ -372,9 +380,9 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
-                        <div class="our-project wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">
+                        <div class="our-project wow fadeInUp">
                             <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/boulder-dash.png">
+                                <a class="test-popup-link cursor-links" href="https://github.com/OlivierS7/BoulderDash" target="_blank">
                                     <img src="./img/portfolio/boulder-dash.png" alt="Boulder Dash" class="img-fluid">
                                 </a>
                             </div>
@@ -385,9 +393,9 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
-                        <div class="our-project wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+                        <div class="our-project wow fadeInRight">
                             <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/electrocardiogramme.png">
+                                <a class="test-popup-link">
                                     <img src="./img/portfolio/electrocardiogramme.png" alt="Electrocardiogramme" class="img-fluid">
                                 </a>
                             </div>
@@ -398,9 +406,9 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
-                        <div class="our-project wow fadeInLeft" data-wow-duration="1s">
+                        <div class="our-project wow fadeInLeft">
                             <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/animus.png">
+                                <a class="test-popup-link">
                                     <img src="./img/portfolio/animus.png" alt="Animus" class="img-fluid">
                                 </a>
                             </div>
@@ -411,9 +419,9 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
-                        <div class="our-project wow fadeInUp" data-wow-duration="1s" data-wow-delay=".25s">
+                        <div class="our-project wow fadeInUp">
                             <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/robot.jpg">
+                                <a class="test-popup-link">
                                     <img src="./img/portfolio/robot.jpg" alt="Robot Pathfinding" class="img-fluid img-border">
                                 </a>
                             </div>
@@ -424,9 +432,9 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 element-item following latest popular">
-                        <div class="our-project wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+                        <div class="our-project wow fadeInRight">
                             <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/easysave.png">
+                                <a class="test-popup-link cursor-links" href="https://github.com/OlivierS7/EasySave" target="_blank">
                                     <img src="./img/portfolio/easysave.png" alt="EasySave" class="img-fluid img-border">
                                 </a>
                             </div>
@@ -496,8 +504,7 @@
                         </div>
                         <div class="col-lg-8 col-md-12 about-client">
                             <h4 class="text-uppercase">Sabrina D.</h4>
-                            <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem architecto
-                                consequuntur ratione, obcaecati corrupti deserunt.</p>
+                            <p class="para">Olivier a créé mon site et j'en suis ravie ! Professionnel, réactif et à l'écoute tout au long du développement du site, il a su me donner de très bons conseils. Je recommande à 100%</p>
                         </div>
                     </div>
                 </div>
@@ -509,7 +516,7 @@
 
         <!--  ======================== End Contact Me Area ==============================  -->
 
-        <section class="contact-area">
+        <section class="contact-area" id="contact">
             <div class="container">
                 <ul class="social">
                     <li data-text="LinkedIn" data-color="#0e76a8"><a href="https://www.linkedin.com/in/olivier-simonneau-pro/" class="cursor-links linkedin" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.5" data-tilt-reverse="true"><i class="fab fa-linkedin"></i></a></li>
@@ -527,18 +534,18 @@
     <footer class="footer-area">
         <div class="container">
             <div class="site-logo text-center py-4">
-                <img src="./img/logo.png" alt="logo">
+                <img src="./img/logo.png" id="footer-logo" alt="logo">
             </div>
             <div class="social text-center">
                 <a href="https://www.linkedin.com/in/olivier-simonneau-pro/" class="cursor-links"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/OlivierS7" class="cursor-links"><i class="fab fa-github"></i></a>
-                <a href="https://olivier-simonneau.fr" class="cursor-links"><i class="fas fa-globe"></i></a>
+                <a href="https://github.com/OlivierS7" class="cursor-links"><i class="fab fa-github"></i></a>               
                 <a href="mailto:pro@olivier-simonneau.fr" class="cursor-links"><i class="fas fa-at"></i></a>
                 <a href="tel:+33761587715" class="cursor-links"><i class="fas fa-mobile-alt"></i></a>
+                <a href="https://olivier-simonneau.fr" class="cursor-links"><i class="fas fa-globe"></i></a>
             </div>
             <div class="copyrights text-center">
                 <p class="para">
-                    Copyright ©2021 Tous droits réservés | Créé et développé par 
+                    Copyright ©2022 Tous droits réservés | Créé et développé par 
                     <a href="https://olivier-simonneau.fr" class="cursor-links"><span style="color: var(--primary-color);">Olivier SIMONNEAU</span></a>
                 </p>
             </div>
@@ -556,7 +563,7 @@
     <script src="./vendor/isotope/isotope.min.js"></script>
 
     <!--  Magnific popup script file  -->
-    <script src="./vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+    <!-- <script src="./vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script> -->
 
     <!--  Owl-carousel js file  -->
     <script src="./vendor/owl-carousel/js/owl.carousel.min.js"></script>
@@ -580,6 +587,12 @@
 
     <!-- Vanilla-tilt.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.110.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="./js/three-script.js"></script>
+    <script src="./js/character.js"></script>
 
 </body>
 

@@ -40,12 +40,12 @@ let $btns = $('.project-area .button-group button');
         return false;
     })
 
-    $('.project-area .button-group #btn1').trigger('click');
+    // $('.project-area .button-group #btn1').trigger('click');
 
-    $('.project-area .grid .test-popup-link').magnificPopup({
-        type: 'image',
-        gallery: { enabled: true }
-    });
+    // $('.project-area .grid .test-popup-link').magnificPopup({
+    //     type: 'image',
+    //     gallery: { enabled: true }
+    // });
 
 
 // Owl-carousel
@@ -70,18 +70,18 @@ if(window.innerWidth < 992) {
 const loader = document.querySelector("#preloader");
 loader.style.left = "-100%";
 
-let socialList = document.querySelectorAll(".social li");
-let bg = document.querySelector(".contact-area");
-socialList.forEach(el => {
-    el.addEventListener("mouseenter", function (event) {
-        let color = event.target.getAttribute("data-color");
-        bg.style.backgroundColor = color;
-    })
+// let socialList = document.querySelectorAll(".social li");
+// let bg = document.querySelector(".contact-area");
+// socialList.forEach(el => {
+//     el.addEventListener("mouseenter", function (event) {
+//         let color = event.target.getAttribute("data-color");
+//         bg.style.backgroundColor = color;
+//     })
 
-    el.addEventListener("mouseleave", function (event) {
-        bg.style.backgroundColor = "#fff";
-    })
-})
+//     el.addEventListener("mouseleave", function (event) {
+//         bg.style.backgroundColor = "#fff";
+//     })
+// })
 
 
 })

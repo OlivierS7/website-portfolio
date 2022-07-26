@@ -79,7 +79,7 @@
 }
 
 
-@media only screen and (max-width: 500px){
+@media screen and (max-width: 500px){
     .header_area .main-menu .navbar-brand img{
         width: 60%;
         height: 60%;
@@ -93,6 +93,12 @@
     }
     .site-main .brand-area .experience-area .years-area h2 > span {
         font-size: 18px;
+    }
+
+    .site-main .site-banner .site-title .animated-text,
+    .site-main .site-banner .site-title .animated-text-2 {
+        min-height: 40px;
+        font: normal bold 20px/ 40px var(--nunito_sans)
     }
 }
 

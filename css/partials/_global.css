@@ -2,17 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
-/* Global Classes */ 
-
-.title-text{
-    font: normal bold 50px/ 72px var(--nunito_sans);
-}
-
-.text-uppercase{
-    text-transform: uppercase;
-}
-
 /* Buttons */ 
 
 .button{

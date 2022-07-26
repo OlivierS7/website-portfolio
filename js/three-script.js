@@ -42,10 +42,10 @@ const sizes = {
 }
 
 if(sizes.width < 750) {
-    MESHES_NUMBER = 16
+    MESHES_NUMBER = 9
     client_offset = 5
 } else {
-    MESHES_NUMBER = 32
+    MESHES_NUMBER = 18
     client_offset = 5.5
 }
 

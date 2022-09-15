@@ -24,4 +24,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: oliviers7/portfolio:latest
+          tags: oliviers7/website-portfolio:latest

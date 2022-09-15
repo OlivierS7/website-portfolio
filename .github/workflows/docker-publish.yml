@@ -20,9 +20,22 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
       -
-        name: Build and push
-        uses: docker/build-push-action@v3
+        name: Docker meta
+        id: docker_meta
+        uses: docker/metadata-action@v3
         with:
-          file: ./Dockerfile
+          images:
+            ghcr.io/${{ github.repository }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v2
+        with:
           push: true
-          tags: oliviers7/website-portfolio:latest
+          tags:  ${{ steps.docker_meta.outputs.tags }}
+          labels: ${{ steps.docker_meta.outputs.labels }}

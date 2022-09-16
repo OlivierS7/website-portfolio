@@ -40,14 +40,3 @@ jobs:
           push: true
           tags:  ${{ steps.docker_meta.outputs.tags }}
           labels: ${{ steps.docker_meta.outputs.labels }}
-      - 
-        name: Connect SSH and Deploy
-        uses: appleboy/ssh-action@master
-        with:
-          host: olivier-simonneau.fr
-          username: vpsos
-          key: ${{ secrets.PORTFOLIO_SECRET }}
-          port: 22
-          script: |
-            cd docker/portfolio/
-            docker compose up -d
